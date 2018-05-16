@@ -10,7 +10,7 @@ from django.conf import settings
 
 urlpatterns = [
     url(r'^$', views.index, name='index')
-] 
+]
 
 if settings.DEBUG:
     # adds /static/ for all files in web/static
