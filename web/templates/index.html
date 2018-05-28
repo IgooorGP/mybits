@@ -1,20 +1,63 @@
 {% load static  %}
 <!DOCTYPE <!DOCTYPE html>
 <html>
-<head>
+  <head>
     <meta charset="utf-8" />
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">  -->
+    <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Me</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="{% static "css/main.css" %}" />
-</head>
-<body>
-    <nav>
-        <ul class="navbar-top">
-            <li class="navbar-top-logo"><img src="{% static "img/mybits.png" %}"></li>
-            <li class="navbar-top-item"><a>Home</a></li>
-            <li class="navbar-top-item"><a>About me</a></li>
-        </ul>
-    </nav>
-</body>
+    <script src="{% static "js/main.js" %}" defer></script>
+  </head>
+
+  <body>
+    <header>
+      <div class="container">
+          <div id="branding">
+            <h1>Igor Grillo Peternella</h1>
+          </div>
+
+          <nav>
+            <ul class="navbar-top-right">
+              <li><a href="">About</a></li>
+              <li><a href="">Resume</a></li>
+              <li><a href="">Experience</a></li>
+              <li><a href="">Contact</a></li>
+            </ul>
+          </nav>
+      </div>
+    </header>
+
+    <section>
+      <div class="display-container">
+        <div class="top">
+          <p>Welcome!</p>
+        </div>
+        
+        <div class="split-container">
+            <div class="me">
+              <img src="{% static "img/me.png" %}">
+              <p>8-bits me</p>
+            </div>
+
+            <div class="msg">
+                <p>
+                  " Hello there, stranger! I'm pleased to know that you've come so far 
+                  to get to know a little bit about me! Please, enjoy your stay and 
+                  should you have any doubts, recommendations, or just want to talk to
+                  me, check my contact info! "
+                </p>
+                <p class="quote-name">- Igor Grillo Peternella</p>
+            </div>
+        </div>
+      
+        <div class="btn">
+          <button>START</button>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
