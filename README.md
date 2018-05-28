@@ -1,2 +1,5 @@
 # MyBits
-A funny webpage about me!
+A webpage about me!
+
+# Screenshots
+![Screenshot](docs/img/welcome_1.png)
