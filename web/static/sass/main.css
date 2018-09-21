@@ -1,0 +1,157 @@
+/* Tag properties */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/static/img/coding_1.jpg");
+  background-size: cover;
+  color: white;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  font-family: "Arial";
+  background: rgba(15, 34, 53, 0.7);
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+nav {
+  width: 40%;
+  float: right;
+  height: 95px;
+}
+
+header {
+  /* background-color: rgb(17, 19, 31, 0.9) */
+  background: rgba(0, 0, 0, 0.6);
+  border-bottom: 3px solid #00ff14;
+}
+
+a:visited {
+  color: white;
+}
+
+/* ids */
+#branding {
+  width: 30%;
+  display: inline-block;
+  text-align: center;
+  height: 95px;
+  padding-top: 10px;
+}
+
+#branding h1 {
+  line-height: 40px;
+  font-size: 30px;
+  font-family: 'Press Start 2P', cursive;
+}
+
+/* classes */
+.navbar-top-right {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+}
+
+.navbar-top-right a {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 20px;
+  padding: 35px 35px 35px 35px;
+  height: 100%;
+  text-align: center;
+  display: block;
+}
+
+.navbar-top-right li {
+  height: 100%;
+  align-self: flex-end;
+}
+
+.navbar-top-right a:hover {
+  background-color: #303c31;
+}
+
+.display-container {
+  display: flex;
+  flex-direction: column;
+  background: rgba(0, 0, 0, 0.7);
+  height: calc(100% - 140px);
+  width: 80%;
+  margin: 20px auto 0 auto;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.split-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.top p {
+  margin: 10% auto;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 50px;
+}
+
+.msg {
+  width: 80%;
+}
+
+.msg p {
+  /* margin: 0 5% */
+  font-size: 32px;
+}
+
+.quote-name {
+  font-size: 10px;
+  padding: 20px 70px 20px 0px;
+  float: right;
+}
+
+.me {
+  margin-left: 5%;
+  width: 25%;
+  height: 300px;
+}
+
+.me img {
+  height: 90%;
+}
+
+.me p {
+  margin: 5% 10%;
+  font-family: 'Press Start 2P', cursive;
+}
+
+.btn {
+  margin: auto 0 50px 0;
+}
+
+.btn button {
+  color: #232323;
+  font-family: 'Press Start 2P', cursive;
+  font-size: 20px;
+  background-color: #3bd847;
+  border: 0;
+  padding: 20px 50px 20px 50px;
+  display: block;
+}
+
+.btn button:hover {
+  color: #fff;
+  background-color: #58ea63;
+}

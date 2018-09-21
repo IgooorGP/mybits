@@ -118,3 +118,6 @@ tramp
 
 # log files
 **/*.log
+
+node_modules/
+**/*.d.ts
