@@ -6,6 +6,6 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('', include('web.urls')) # includes the web app urls with prefix
+    path("admin/", admin.site.urls),
+    path("", include("backbits.urls")),  # includes the web app urls with prefix
 ]
