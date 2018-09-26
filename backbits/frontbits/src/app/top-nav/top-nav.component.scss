@@ -2,10 +2,20 @@
 
 .eightbits {
     font-family: 'Press Start 2P', cursive;
-    color: #fff;
-    letter-spacing: -1px;
+    color: #22b455;
+    letter-spacing: -1px; 
 }
 
 .navbar {
-    background:  #232323;
+    background-color: #020204;
+}
+
+.nav-item a {
+    height: 100%;
+    color: #22b455;
+}
+
+.nav-item a:hover {
+    background-color: #232323;
+    color: #22b455;
 }
