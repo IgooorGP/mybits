@@ -11,11 +11,29 @@
 }
 
 .nav-item a {
+    font-family: 'Press Start 2P', cursive;
+    letter-spacing: -1px; 
+    margin: 0 30px;
     height: 100%;
     color: #22b455;
 }
 
 .nav-item a:hover {
-    background-color: #232323;
-    color: #22b455;
+    color: #ffffff;
+}
+
+// .nav-item a:visited {
+//     color: #22b455;
+//     // color: #22b455;
+// }
+
+#igp-logo {
+    width: 500px;
+    max-height: 200px;
+    height: auto;
+    margin: auto;
+}
+
+.navbar-nav {
+    // flex-grow: 2;
 }
