@@ -6,34 +6,41 @@
     letter-spacing: -1px; 
 }
 
-.navbar {
+.top-nav {
     background-color: #020204;
 }
 
 .nav-item a {
     font-family: 'Press Start 2P', cursive;
+    font-size: 0.8em;
+    text-transform: capitalize;
     letter-spacing: -1px; 
     margin: 0 30px;
     height: 100%;
-    color: #22b455;
-}
-
-.nav-item a:hover {
     color: #ffffff;
 }
 
-// .nav-item a:visited {
-//     color: #22b455;
-//     // color: #22b455;
-// }
+.nav-item a:hover {
+    color: #bbc5ba;
+}
+
+.navbar {
+    padding: 0;
+}
 
 #igp-logo {
-    width: 500px;
-    max-height: 200px;
+    width: 300px;
+    max-height: 150px;
     height: auto;
     margin: auto;
 }
 
-.navbar-nav {
-    // flex-grow: 2;
+.bottom-nav {
+    // border-top: 1px solid green;
+    background-color: #008F11;
+}
+
+.pipe {
+    max-width: 100px;
+    max-height: 100px;
 }
