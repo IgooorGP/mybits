@@ -1,3 +1,15 @@
 .footer {
-    background: #204829;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #b35583;
+    height: 4vh;
+}
+
+a:visited {
+    color: #232323;
+}
+
+a {
+    margin: 0 1%;
 }

@@ -1,8 +1,48 @@
 .container {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1.5vh;
+    bottom: 1.5vh;
     background-color: black;
-    height: 85vh;
+    height: 73vh;
+    z-index: 10;
+    overflow: hidden;  // essential due to the relative position
 }
 
 .test {
-    margin: 2% 0 2% 0;
+    width: 100%;
+    background-color: #232323;
+    height: 76vh;
+    z-index: -1;
+}
+
+.eightbits {
+    font-family: 'Press Start 2P', cursive;
+    color: #22b455;
+    letter-spacing: -1px; 
+}
+
+.display-title {
+    position: relative;
+    margin: 2% auto;
+}
+
+.inner-display {
+    display: flex;
+    flex-direction: row;
+}
+
+.inner-display-img-area {
+    width: 30%;
+    height: 40vh;
+}
+
+.inner-display-img-area img {
+    width: 100%;
+    height: 100%;
+}
+
+.inner-display-text-area {
+    width: 70%;
 }

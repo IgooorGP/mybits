@@ -8,11 +8,13 @@
 
 .top-nav {
     background-color: #020204;
+    justify-content: flex-start;
 }
+
 
 .nav-item a {
     font-family: 'Press Start 2P', cursive;
-    font-size: 0.8em;
+    font-size: 15px;
     text-transform: capitalize;
     letter-spacing: -1px; 
     margin: 0 30px;
@@ -30,17 +32,27 @@
 
 #igp-logo {
     width: 300px;
-    max-height: 150px;
-    height: auto;
+    // height: 150px;
+    height: 15vh;
+    // height: auto;
     margin: auto;
 }
 
 .bottom-nav {
     // border-top: 1px solid green;
     background-color: #008F11;
+    height: 4vh;
 }
 
 .pipe {
     max-width: 100px;
     max-height: 100px;
+    display: none;
 }
+
+@media only screen and (min-width: 700px) {
+    .pipe {
+        display: inline-block;
+    }
+}
+
