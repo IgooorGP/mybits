@@ -1,7 +1,5 @@
 <nav class="navbar navbar-expand-lg top-nav">
-  <!-- <img src="assets/pipe_left.png" class="pipe"> -->
-  <a class="navbar-brand mx-auto" href="#"><img src="../../assets/igp.png" id="igp-logo"></a>
-  <!-- <img src="assets/pipe_right.png" class="pipe"> -->
+  <a class="navbar-brand mx-auto" [routerLink]="['/']"><img src="../../assets/igp.png" id="igp-logo"></a>
 </nav>
 
 <nav class="navbar navbar-expand-md bottom-nav navbar-light">
@@ -14,16 +12,19 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mx-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">About me</a>
+        <a class="nav-link" [routerLink]="['/']">Chat Bot</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Projects</a>
+        <a class="nav-link" [routerLink]="['about']">About me</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Resume</a>
+        <a class="nav-link" [routerLink]="['projects']">Projects</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Blog</a>
+        <a class="nav-link" [routerLink]="['skills']">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['contacts']">Contacts</a>
       </li>
     </ul>
   </div>

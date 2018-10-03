@@ -1,8 +1,9 @@
-.inner-display-img-area {
-    width: 40%;
+.extra {
+    overflow-y: auto;
+    display: flex;
 }
 
-.inner-display-img-area img {
-    padding-left: 5%;
-    border-radius: 20%;
+.desc-container {
+    flex-direction: column;
+    align-items: flex-start;
 }

@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AskTheBotComponent implements OnInit {
 
+  displayTitle: string = "A-bot me!";
+
   constructor() { }
 
   ngOnInit() {

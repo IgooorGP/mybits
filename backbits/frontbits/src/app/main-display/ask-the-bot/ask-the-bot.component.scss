@@ -4,12 +4,27 @@
     letter-spacing: -1px; 
 }
 
+h2.display-title {
+    text-align: center;
+    position: relative;
+    margin: 2% auto;
+    font-size: 50px;
+    color: #de145f;
+}
+
+@media screen and (max-width: 500px) {
+    h2.display-title {
+        margin: 4% auto;
+        font-size: 30px;
+    }
+}
+
 .inner-display {
     display: flex;
     flex-direction: row;
 }
 
-.bot-answer-area {
+.inner-display-text-area {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -33,7 +48,7 @@
 }
 
 @media screen and (min-width: 900px) {
-    .bot-answer-area {
+    .inner-display-text-area {
         width: 70%;
     }
 
@@ -48,12 +63,12 @@
     }
 }
 
-.inner-display-button-area {
-    margin: 2% auto 0 auto;
+.inner-display-text-area p {
+    margin: 1%;
 }
 
-.bot-answer-area p {
-    margin: 0;
+.inner-display-button-area {
+    margin: 2% auto 0 auto;
 }
 
 .inner-display-img-area img {
