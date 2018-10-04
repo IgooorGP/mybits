@@ -1,9 +1,70 @@
-.extra {
-    overflow-y: auto;
+.inner-display-about-me {
     display: flex;
+    flex-direction: row;
 }
 
-.desc-container {
+.about-me-picture-container {
+    display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-content: flex-start;
+    word-wrap: break-word;  
+
+    p {
+        width: 100%;
+        margin: 0 0 0 7%;
+        font-size: 10px;
+    }
+
+    img {
+        height: 45%;
+        width: 100%;
+        border-radius: 15px;
+        margin: 0 0 10% 5%;
+    }
+
+    .about-me-tag {
+        color:white;
+        margin-right: 1%;
+    }
 }
+
+@media screen and (max-width: 500px) {
+    .about-me-picture-container {
+        width: 30%;
+
+        p {
+            font-size: 8px;
+        }
+    }
+
+} 
+
+.about-me-text-container { 
+    height: 55vh;
+    overflow-y: scroll;
+    width: 80%;   
+    padding: 0 2% 0 4%;
+
+    p {
+        color: white;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .about-me-text-container {
+        p {
+            font-size: 9px;
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .about-me-text-container {
+        p {
+            font-size: 7px;
+        }
+    }
+}
+
+

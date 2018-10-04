@@ -1,0 +1,87 @@
+.eightbits {
+    font-family: 'Press Start 2P', cursive;
+    color: #22b455;
+    letter-spacing: -1px; 
+}
+
+h2.display-title {
+    text-align: center;
+    position: relative;
+    margin: 2% auto;
+    font-size: 50px;
+    color: #0ee00b;
+}
+
+.title-and-gif-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 5vh;
+
+    img {
+        padding: 0.5%;
+        background: blue;
+        margin: 2% 2%;
+        width: 15%;
+        height: 15vh;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .title-and-gif-container {
+        h2 {
+            font-size: 1.4em;
+        }
+
+        img {
+            width: 15%
+        }
+    }
+}
+
+.projects-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    height: 40vh;
+}
+
+.project-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 0 4vh 0;
+    height: 15vh;
+
+    img {
+        margin: 0% 2%;
+        width: 15%;
+        height: 100%;
+        background: white;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+}
+
+.project-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    p {
+        margin: 0;
+    }
+
+    p.project-description-title {
+        margin-bottom: 2vh;
+    }
+
+    a.project-description-link {
+        margin-bottom: 1vh;
+    }
+
+    p.project-description-itself {
+        color: white;
+    }
+}
