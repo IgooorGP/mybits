@@ -1,15 +1,21 @@
 .footer {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #b35583;
-    height: 4vh;
+    background: #0a0909;
+    height: 3.5vh;
 }
 
 a:visited {
-    color: #232323;
+    color: white;
 }
 
 a {
-    margin: 0 1%;
+    display: block;
+    height: 4vh;
+    margin: 0 10%;
 }

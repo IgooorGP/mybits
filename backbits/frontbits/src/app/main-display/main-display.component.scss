@@ -1,5 +1,6 @@
 .container {
     // overrides bootstrap's container
+    opacity: 0.95;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
@@ -14,9 +15,10 @@
 
 .test {
     width: 100%;
-    background-color: #311c26;
+    // background-color: #232323;
+    background: url("../../assets/matrix.jpg");
+    background-size: cover;
     height: 76vh;
-    z-index: -1;
 }
 
 .eightbits {

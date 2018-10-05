@@ -9,18 +9,19 @@ h2.display-title {
     position: relative;
     margin: 2% auto;
     font-size: 50px;
-    color: #0ee00b;
+    color: #ebff03;
 }
 
 .title-and-gif-container {
     display: flex;
     flex-direction: row;
+    justify-content: center;
     align-items: center;
-    margin-bottom: 5vh;
+    margin-bottom: 1vh;
 
     img {
         padding: 0.5%;
-        background: blue;
+        background: #ebff03;
         margin: 2% 2%;
         width: 15%;
         height: 15vh;
@@ -28,10 +29,10 @@ h2.display-title {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 800px) {
     .title-and-gif-container {
         h2 {
-            font-size: 1.4em;
+            font-size: 1.6em;
         }
 
         img {
@@ -43,21 +44,20 @@ h2.display-title {
 .projects-container {
     display: flex;
     flex-direction: column;
-    overflow-y: auto;
-    height: 40vh;
+    align-content: flex-start;
+    overflow-y: scroll;
+    height: 47vh;
 }
 
 .project-container {
     display: flex;
-    flex-direction: row;
     align-items: center;
-    margin: 0 0 4vh 0;
-    height: 15vh;
+    margin: 70px 0;
 
     img {
-        margin: 0% 2%;
+        margin: 0% 20px;
         width: 15%;
-        height: 100%;
+        height: 15vh;
         background: white;
         border-radius: 15px;
         border: 1px solid white;
@@ -68,7 +68,9 @@ h2.display-title {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-
+    align-items: flex-start;
+    height: 15vh;
+        
     p {
         margin: 0;
     }

@@ -7,9 +7,45 @@
 h2.display-title {
     text-align: center;
     position: relative;
-    margin: 2% auto;
+    margin: 2% 0;
     font-size: 50px;
-    color: #de145f;
+    color: #00ff23;
+}
+
+#chat-bot-desc {
+    color: #21ff0b;
+}
+
+.chat-user-desc {
+    color: #21ff0b;
+}
+
+.title-and-gif-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        padding: 0.5%;
+        background: #1b0f18;
+        margin: 2% 4%;
+        width: 20%;
+        height: 12vh;
+        border-radius: 20px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .title-and-gif-container {
+        h2 {
+            font-size: 1.6em;
+        }
+
+        img {
+            width: 15%
+        }
+    }
 }
 
 @media screen and (max-width: 500px) {
@@ -18,6 +54,8 @@ h2.display-title {
         font-size: 30px;
     }
 }
+
+
 
 .inner-display {
     display: flex;
@@ -100,28 +138,14 @@ h2.display-title {
 .speech-bubble {
     height: 15vh;
 	position: relative;
-	background: #ddfcde;
+	background: #0f110f;
     border-radius: .4em;
+    border: 1px solid green;
     overflow-y: scroll;
 }
 
 p.speech-bubble {
     padding: 2% 4%;
-}
-
-.speech-bubble:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 42px solid transparent;
-	border-right-color: #ddfcde;
-	border-left: 0;
-	border-bottom: 0;
-	margin-top: -21px;
-	margin-left: -42px;
 }
 
 .bot-answer-area p {
@@ -131,22 +155,26 @@ p.speech-bubble {
     padding: 2% 4%;        
     height: 15vh;
 	position: relative;
-	background: #dcc8de;
+	background: #0e0b0e;
     border-radius: .4em;
+    border: 1px solid green;
 }
 
 .user-input-text {
-    color: purple;
+    color: white;
     font-size: 20px;
 }
 
 @media screen and (max-width: 600px) {
-    .user-input-text {
-        color: purple;
+    .user-input-text {        
         font-size: 12px;
     }
 
     p.speech-bubble {
         font-size: 12px;
     }
+}
+
+textarea:focus, input:focus{
+    outline: none;
 }

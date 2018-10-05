@@ -9,6 +9,7 @@
 .top-nav {
     background-color: #020204;
     justify-content: flex-start;
+    border-bottom: 1px solid white;
 }
 
 
@@ -39,7 +40,7 @@
 .bottom-nav {
     background-color: #008F11;
     height: 4vh;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    border-bottom: 1px solid white;
 }
 
 .pipe {
