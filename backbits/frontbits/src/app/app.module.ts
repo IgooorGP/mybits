@@ -9,12 +9,14 @@ import { AboutMeComponent } from './main-display/about-me/about-me.component';
 import { Routes, RouterModule } from "@angular/router";
 import { ProjectsComponent } from './main-display/projects/projects.component';
 import { SkillsComponent } from './main-display/skills/skills.component';
+import { ContactsComponent } from './main-display/contacts/contacts.component';
 
 const appRoutes: Routes = [
   { path: '', component: AskTheBotComponent },  // HomeComponent (empty path ~root)
   { path: 'about', component: AboutMeComponent },
   { path: 'projects', component: ProjectsComponent },
   { path: 'skills', component: SkillsComponent },
+  { path: 'contacts', component: ContactsComponent },
 ];
 
 @NgModule({
@@ -27,6 +29,7 @@ const appRoutes: Routes = [
     AboutMeComponent,
     ProjectsComponent,
     SkillsComponent,
+    ContactsComponent,
   ],
   imports: [
     BrowserModule,

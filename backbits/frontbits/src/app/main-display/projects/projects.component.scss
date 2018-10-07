@@ -52,15 +52,34 @@ h2.display-title {
 .project-container {
     display: flex;
     align-items: center;
-    margin: 70px 0;
+    font-size: 10px;
+    // margin: 10% 0;
+    margin: 5vh 0;
+    min-height: 15vh;
 
     img {
         margin: 0% 20px;
-        width: 15%;
-        height: 15vh;
+        width: 25%;
+        height: 20vh;
         background: white;
         border-radius: 15px;
         border: 1px solid white;
+    }
+}
+
+@media screen and (min-width: 600px) { 
+    .project-container {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 800px) { 
+    .project-container {
+        font-size: 15px;
+        
+        img {
+            width: 20%;
+        }
     }
 }
 
@@ -69,9 +88,9 @@ h2.display-title {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    height: 15vh;
+    // height: 15vh;
         
-    p {
+    p { 
         margin: 0;
     }
 

@@ -7,7 +7,7 @@
 h2.display-title {
     text-align: center;
     position: relative;
-    margin: 2% 0;
+    margin: 2% 0 4% 0;
     font-size: 50px;
     color: #00ff23;
 }
@@ -48,14 +48,12 @@ h2.display-title {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 700px) {
     h2.display-title {
-        margin: 4% auto;
+        margin: 4% 0 15% 0;
         font-size: 30px;
     }
 }
-
-
 
 .inner-display {
     display: flex;
