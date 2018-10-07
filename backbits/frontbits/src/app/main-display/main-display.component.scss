@@ -1,13 +1,13 @@
 .container {
     // overrides bootstrap's container
-    opacity: 0.95;
+    opacity: 0.97;
     border-radius: 10px;
     display: flex;
     flex-direction: column;
     position: relative;
     top: 1.5vh;
     bottom: 1.5vh;
-    background-color: #1b0f18;
+    background-color: #030804;
     height: 73vh;
     z-index: 10;
     overflow: hidden;  // essential due to the relative position
