@@ -21,7 +21,8 @@ gulp.task('build', function (cb) {
             console.log("Executing angular build (wait for stdout output) ...");
 
             let deployUrl = "/static/backbits/";  // necessary for django static collection
-            let execSync = exec(`ng build --prod --deploy-url "${deployUrl}" --base-href "${deployUrl}"`);
+            // let execSync = exec(`ng build --prod --deploy-url "${deployUrl}" --base-href "${deployUrl}"`);
+            let execSync = exec(`ng build --prod --deploy-url "${deployUrl}"`);
 
             console.log(execSync.toString());  // logs after process
             next();
