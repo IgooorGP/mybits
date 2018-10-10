@@ -23,6 +23,7 @@
     color: #ffffff;
 }
 
+
 .nav-item a:hover {
     color: #bbc5ba;
 }
@@ -59,7 +60,7 @@
 /*
  * Open dropdowns on hover instead of click.
  */
- @media (min-width: 768px) {h
+ @media (min-width: 768px) {
     .dropdown:hover {
       background: #e7e7e7;
     }
@@ -92,3 +93,10 @@
   .dropdown-open {
     background: #e7e7e7;
   }
+
+
+ @media only screen and (max-width: 800px) {
+    a.nav-link {
+        font-size: 9px;
+    }
+}

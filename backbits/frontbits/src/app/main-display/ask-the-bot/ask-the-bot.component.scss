@@ -1,6 +1,6 @@
 .eightbits {
     font-family: 'Press Start 2P', cursive;
-    color: #22b455;
+    color: #42f719;
     letter-spacing: -1px; 
 }
 
@@ -9,14 +9,10 @@ h2.display-title {
     position: relative;
     margin: 2% 0 4% 0;
     font-size: 50px;
-    color: #00ff23;
 }
 
-#chat-bot-desc {
-    color: #21ff0b;
-}
 
-.chat-user-desc {
+.chat-user-dec {
     color: #21ff0b;
 }
 
@@ -128,7 +124,7 @@ h2.display-title {
 
 @media screen and (min-width: 900px) {
     .start-button {
-        margin: 5% 0 0 70%;
+        margin: 2vh 0 0 70%;
         width: auto;
     }
 }
@@ -140,6 +136,7 @@ h2.display-title {
     border-radius: .4em;
     border: 1px solid green;
     overflow-y: scroll;
+    color: #0ff359;
 }
 
 p.speech-bubble {
@@ -175,4 +172,24 @@ p.speech-bubble {
 
 textarea:focus, input:focus{
     outline: none;
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1d2125; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #42f719; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }
