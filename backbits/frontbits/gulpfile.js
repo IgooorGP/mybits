@@ -3,11 +3,6 @@ var gulp = require("gulp"),
     clean = require("gulp-clean"),
     exec = require("child_process").execSync; // synchronous
 
-// sets final destination of static files for django static folders
-// const PORING_OUTPUT_PATH_JS = "../static/js";
-// const PORING_OUTPUT_PATH_CSS = "../static/css";
-// const PORING_OUTPUT_PATH_IMG = "../static/img";
-
 const BACKBITS_OUTPUT_PATH_STATIC = "../static/backbits";
 const BACKBITS_OUTPUT_PATH_HTML = "../templates/backbits";
 
@@ -21,7 +16,6 @@ gulp.task('build', function (cb) {
             console.log("Executing angular build (wait for stdout output) ...");
 
             let deployUrl = "/static/backbits/";  // necessary for django static collection
-            // let execSync = exec(`ng build --prod --deploy-url "${deployUrl}" --base-href "${deployUrl}"`);
             let execSync = exec(`ng build --prod --deploy-url "${deployUrl}"`);
 
             console.log(execSync.toString());  // logs after process
@@ -40,8 +34,14 @@ gulp.task('build', function (cb) {
                 .on("finish", next);
         },
         (next) => {
-            console.log("Moving files to django's static folder...");
-            gulp.src(ANGULAR_OUTPUT_PATH + "/**")
+            console.log("Moving js and css files to django's static folder...");
+            gulp.src(ANGULAR_OUTPUT_PATH + "/*.*")
+                .pipe(gulp.dest(BACKBITS_OUTPUT_PATH_STATIC))
+                .on("finish", next);
+        },
+        (next) => {
+            console.log("Moving static files to django's static folder...");
+            gulp.src(ANGULAR_OUTPUT_PATH + "/static/backbits/*.*")
                 .pipe(gulp.dest(BACKBITS_OUTPUT_PATH_STATIC))
                 .on("finish", next);
         }
