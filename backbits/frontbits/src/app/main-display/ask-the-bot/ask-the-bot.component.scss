@@ -32,25 +32,6 @@ h2.display-title {
     }
 }
 
-@media screen and (max-width: 800px) {
-    .title-and-gif-container {
-        h2 {
-            font-size: 1.6em;
-        }
-
-        img {
-            width: 15%
-        }
-    }
-}
-
-@media screen and (max-width: 700px) {
-    h2.display-title {
-        margin: 4% 0 15% 0;
-        font-size: 30px;
-    }
-}
-
 .inner-display {
     display: flex;
     flex-direction: row;
@@ -79,22 +60,6 @@ h2.display-title {
     font-size: 15px;
 }
 
-@media screen and (min-width: 900px) {
-    .inner-display-text-area {
-        width: 70%;
-    }
-
-    .inner-display-img-area {
-        width: 30%;
-        height: 40vh;
-        margin-top: 0;
-    }
-
-    .inner-display-img-area p.eightbits {
-        font-size: 20px;
-    }
-}
-
 .inner-display-text-area p {
     margin: 1%;
 }
@@ -114,19 +79,13 @@ h2.display-title {
 }
 
 .start-button {
-    margin: 5% 0 0 60%;
+    margin: 3% 0 0 60%;
+    font-size: 10px;
     width: auto;
     color: black;
     border: 1px gray solid;
     background: #22b455;
-    padding: 10px;
-}
-
-@media screen and (min-width: 900px) {
-    .start-button {
-        margin: 2vh 0 0 70%;
-        width: auto;
-    }
+    padding: 5px;
 }
 
 .speech-bubble {
@@ -160,7 +119,41 @@ p.speech-bubble {
     font-size: 20px;
 }
 
+
+@media screen and (max-width: 800px) {
+    .title-and-gif-container {
+        h2.display-title {
+            font-size: 15px;
+            margin: 5% auto;
+        }
+
+        img {
+            width: 15%
+        }
+    }
+}
+
+
 @media screen and (max-width: 600px) {
+
+    p#chat-bot-desc {
+        font-size: 10px;
+    }
+    
+    .title-and-gif-container {
+        h2.display-title {
+            font-size: 30px;
+        }
+    }
+
+    // .inner-display-img-area {
+    //     display: none;        
+    // }
+
+    // .inner-display-text-area {
+    //     margin: 0 auto;
+    // }
+
     .user-input-text {        
         font-size: 12px;
     }
@@ -169,6 +162,33 @@ p.speech-bubble {
         font-size: 12px;
     }
 }
+
+
+@media screen and (min-width: 900px) {
+    .inner-display-text-area {
+        width: 70%;
+    }
+
+    .inner-display-img-area {
+        width: 30%;
+        height: 40vh;
+        margin-top: 0;
+    }
+
+    .inner-display-img-area p.eightbits {
+        font-size: 20px;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .start-button {
+        font-size: 20px;
+        padding: 10px;
+        margin: 2vh 0 0 70%;
+        width: auto;
+    }
+}
+
 
 textarea:focus, input:focus{
     outline: none;

@@ -36,18 +36,6 @@ h2.display-title {
     }
 }
 
-@media screen and (max-width: 800px) {
-    .title-and-gif-container {
-        h2 {
-            font-size: 1.6em;
-        }
-
-        img {
-            width: 15%
-        }
-    }
-}
-
 .contacts-container {
     margin: 0 auto;
     display: flex;
@@ -74,4 +62,21 @@ h2.display-title {
 
 .contact:hover {
     background-color: #2f2d2e;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .subtitle {
+        font-size: 15px;
+    }
+    
+    .title-and-gif-container {
+        h2 {
+            font-size: 1.6em;
+        }
+
+        img {
+            width: 15%
+        }
+    }
 }

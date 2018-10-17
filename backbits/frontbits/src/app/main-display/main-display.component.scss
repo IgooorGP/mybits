@@ -1,5 +1,4 @@
 .container {
-    // overrides bootstrap's container
     opacity: 0.97;
     border-radius: 10px;
     display: flex;
@@ -10,14 +9,11 @@
     background-color: #030804;
     height: 73vh;
     z-index: 10;
-    overflow: hidden;  // essential due to the relative position
     border: 1px solid white;
 }
 
 .test {
     width: 100%;
-    // background-color: #232323;
-    // background: url("matrix.jpg");
     background-size: cover;
     height: 76vh;
 }
@@ -27,150 +23,3 @@
     color: #22b455;
     letter-spacing: -1px; 
 }
-
-// .display-title {
-//     position: relative;
-//     margin: 2% auto;
-//     font-size: 50px;
-//     color: #de145f;
-// }
-
-// @media screen and (max-width: 500px) {
-//     .display-title {
-//         margin: 4% auto;
-//         font-size: 30px;
-//     }
-// }
-
-
-// .inner-display {
-//     display: flex;
-//     flex-direction: row;
-// }
-
-// .bot-answer-area {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: flex-start;
-//     margin-right: 5%;
-//     width: 70%;
-//     height: 60vh;
-// }
-
-// .inner-display-img-area {
-//     margin-top: 5vh;
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-//     width: 40%;
-//     height: 30vh;
-// }
-
-// .inner-display-img-area p.eightbits {
-//     text-align: center;
-//     font-size: 15px;
-// }
-
-// @media screen and (min-width: 900px) {
-//     .bot-answer-area {
-//         width: 70%;
-//     }
-
-//     .inner-display-img-area {
-//         width: 30%;
-//         height: 40vh;
-//         margin-top: 0;
-//     }
-
-//     .inner-display-img-area p.eightbits {
-//         font-size: 20px;
-//     }
-// }
-
-// .inner-display-button-area {
-//     margin: 2% auto 0 auto;
-// }
-
-// .bot-answer-area p {
-//     margin: 0;
-// }
-
-// .inner-display-img-area img {
-//     width: 100%;
-//     height: calc(100% - 25px);
-// }
-
-// .inner-display-img-area p {
-//     font-size: 20px;
-//     margin: 0;
-// }
-
-// .start-button {
-//     margin: 5% 0 0 60%;
-//     width: auto;
-//     color: black;
-//     border: 1px gray solid;
-//     background: #22b455;
-//     padding: 10px;
-// }
-
-// @media screen and (min-width: 900px) {
-//     .start-button {
-//         margin: 5% 0 0 70%;
-//         width: auto;
-//     }
-// }
-
-// .speech-bubble {
-//     height: 15vh;
-// 	position: relative;
-// 	background: #ddfcde;
-//     border-radius: .4em;
-//     overflow-y: scroll;
-// }
-
-// p.speech-bubble {
-//     padding: 2% 4%;
-// }
-
-// .speech-bubble:after {
-// 	content: '';
-// 	position: absolute;
-// 	left: 0;
-// 	top: 50%;
-// 	width: 0;
-// 	height: 0;
-// 	border: 42px solid transparent;
-// 	border-right-color: #ddfcde;
-// 	border-left: 0;
-// 	border-bottom: 0;
-// 	margin-top: -21px;
-// 	margin-left: -42px;
-// }
-
-// .bot-answer-area p {
-//     margin: 1vh 0;
-// }
-// .speech-bubble-user {
-//     padding: 2% 4%;        
-//     height: 15vh;
-// 	position: relative;
-// 	background: #dcc8de;
-//     border-radius: .4em;
-// }
-
-// .user-input-text {
-//     color: purple;
-//     font-size: 20px;
-// }
-
-// @media screen and (max-width: 600px) {
-//     .user-input-text {
-//         color: purple;
-//         font-size: 12px;
-//     }
-
-//     p.speech-bubble {
-//         font-size: 12px;
-//     }
-// }
