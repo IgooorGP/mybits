@@ -33,7 +33,7 @@ h2.display-title {
         height: 20vh;
         width: 80%;
         border-radius: 15px;
-        margin: 0 0 10% 7%;
+        margin: 0 0 30px 7%;
     }
 
     .about-me-tag {
@@ -92,6 +92,32 @@ h2.display-title {
     h2.display-title {
         font-size: 30px;
     }
+}
+
+// animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+h2.eightbits.display-title {
+  animation: 1s ease-out 0s 1 slideInFromLeft;
+  
+}
+
+img.about-me-pic {
+  transform-origin: left top;
+  animation: scale 1s ease-in-out forwards;
+}
+
+@keyframes scale {
+  to {
+    transform: scale(1.05);
+  }
 }
 
 /* width */

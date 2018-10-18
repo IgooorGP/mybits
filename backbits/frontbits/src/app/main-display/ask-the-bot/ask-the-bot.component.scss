@@ -123,7 +123,6 @@ p.speech-bubble {
 @media screen and (max-width: 800px) {
     .title-and-gif-container {
         h2.display-title {
-            font-size: 15px;
             margin: 5% auto;
         }
 
@@ -189,10 +188,79 @@ p.speech-bubble {
     }
 }
 
-
 textarea:focus, input:focus{
     outline: none;
 }
+
+p#chat-bot-desc {
+    color: white;
+}
+
+// animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+h2.eightbits.display-title {
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+.inner-display-img-area img {
+    -webkit-animation: jump 1.5s ease 0s 2 normal ;
+    animation: jump 1.5s ease 0s 2 normal ;
+}
+
+.inner-display-img-area:hover {
+    -webkit-animation: jump 1.5s ease 0s 2 normal ;
+    animation: jump 1.5s ease 0s 2 normal ;
+ }
+
+@-webkit-keyframes jump {
+  0%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  20%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40%{
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  50%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  60%{
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  80%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  100%{
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+ }
+}
+
+p.speech-bubble.eightbits {
+  margin: 10px 0 0 0px;
+  width: 100%;
+  animation: type 0.6s steps(60, end); 
+}
+
+@keyframes type{ 
+  from { width: 5px; } 
+} 
+
 
 /* width */
 ::-webkit-scrollbar {

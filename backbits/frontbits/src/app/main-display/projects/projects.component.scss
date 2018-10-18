@@ -41,7 +41,7 @@ h2.display-title {
 .project-container {
     display: flex;
     align-items: center;
-    font-size: 8px;
+    font-size: 10px;
     // margin: 10% 0;
     margin: 5vh 0;
     min-height: 15vh;
@@ -99,7 +99,7 @@ h2.display-title {
     }
     
     .project-container {
-        margin: 60px 0;
+        margin: 70px 0;
 
         img {
             min-height: 15vh;
@@ -133,6 +133,20 @@ h2.display-title {
             width: 20%;
         }
     }
+}
+
+// animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+h2.eightbits.display-title {
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;  
 }
 
 /* width */

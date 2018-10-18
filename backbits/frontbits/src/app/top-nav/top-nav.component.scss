@@ -12,17 +12,15 @@
     border-bottom: 1px solid white;
 }
 
-
 .nav-item a {
     font-family: 'Press Start 2P', cursive;
     font-size: 15px;
     text-transform: capitalize;
     letter-spacing: -1px; 
     margin: 0 30px;
-    height: 100%;
+    // height: 100%;
     color: #ffffff;
 }
-
 
 .nav-item a:hover {
     color: #bbc5ba;
@@ -39,8 +37,8 @@
 }
 
 .bottom-nav {
-    background-color: #008F11;
-    height: 4vh;
+    background-color: #4b6f4f;
+    // height: 4vh;
     border-bottom: 1px solid white;
 }
 
@@ -56,47 +54,21 @@
     }
 }
 
-
-/*
- * Open dropdowns on hover instead of click.
- */
- @media (min-width: 768px) {
-    .dropdown:hover {
-      background: #e7e7e7;
-    }
-    .dropdown:hover > .dropdown-menu {
-      display: block;
-    }
+@keyframes growFromCenter {
+  from {
+    transform: scale(0);
   }
-  
-  /*
-   * The following is needed since the dropdowns are <div> elements instead
-   * of <a> elements
-   */
-  .nav > li > div {
-    position: relative;
-    display: block;
-    padding: 10px 15px;
-    cursor: default;
+  to {
+    transform: scale(1);
   }
-  .navbar-nav > li > div {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    line-height: 20px;
-  }
-  .navbar-default .navbar-nav > li > div {
-    color: rgb(119, 119, 119);
-  }
-  .navbar-collapse.collapse {
-    display: none;
-  }
-  .dropdown-open {
-    background: #e7e7e7;
-  }
-
-
- @media only screen and (max-width: 800px) {
-    a.nav-link {
-        font-size: 9px;
-    }
 }
+img#igp-logo {
+  animation: growFromCenter 1s;
+}
+
+.navbar-toggler {
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+}
+
