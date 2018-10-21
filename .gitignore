@@ -80,7 +80,7 @@ celerybeat-schedule
 *.sage.py
 
 # dotenv
-.env
+# .env
 
 # virtualenv
 .venv
@@ -99,3 +99,27 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+# emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# credentials file
+.credentials_env
+
+# vscode
+.vscode
+
+# log files
+**/*.log
+
+node_modules/
+**/*.d.ts
+
+**/frontbits/node_modules

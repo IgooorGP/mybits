@@ -1,0 +1,25 @@
+.container {
+    opacity: 0.97;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 1.5vh;
+    bottom: 1.5vh;
+    background-color: #030804;
+    height: 73vh;
+    z-index: 10;
+    border: 1px solid white;
+}
+
+.test {
+    width: 100%;
+    background-size: cover;
+    height: 76vh;
+}
+
+.eightbits {
+    font-family: 'Press Start 2P', cursive;
+    color: #22b455;
+    letter-spacing: -1px; 
+}

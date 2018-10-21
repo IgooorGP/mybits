@@ -1,0 +1,180 @@
+.eightbits {
+    font-family: 'Press Start 2P', cursive;
+    color: #22b455;
+    letter-spacing: -1px; 
+}
+
+h2.display-title {
+    text-align: center;
+    position: relative;
+    margin: 1% auto;
+    font-size: 50px;
+    color: #ff0072;
+}
+
+.title-and-gif-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    img {
+        padding: 0.5%;
+        background: #030804;
+        margin: 2% 0%;
+        width: 20%;
+        height: 20vh;
+        border-radius: 20px;
+    }
+}
+
+.skills-container {
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    overflow-y: scroll;
+    height: 45vh;
+}
+
+.skill-container {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+    // margin: 10% 0;
+    margin: 5vh 0;
+    min-height: 15vh;
+
+    img {
+        margin: 0% 20px;
+        width: 25%;
+        height: 20vh;
+        background: white;
+        border-radius: 15px;
+        border: 1px solid white;
+    }
+}
+
+.skill-description-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    // height: 15vh;
+        
+    p {
+        margin: 0;
+    }
+
+    span.level-title {
+        color: red;
+    }
+
+    span.level {
+        color: white;
+    }
+        
+    p.skill-description-title {
+        margin-bottom: 2vh;
+    }
+
+    p.skill-description-level {
+        margin-bottom: 1vh;
+    }
+
+    p.skill-description {
+        color: white;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .skill-container {
+        height: 40vh;
+    }
+
+    .skill-container {
+        margin: 60px 0;
+
+        img {
+            min-height: 15vh;
+        }
+        
+    }
+    
+    .title-and-gif-container {
+        h2.display-title {
+            margin: 10% 0;
+            font-size: 1.6em;
+        }
+
+        img {
+            display: none;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: 800px) {
+    .title-and-gif-container {
+        h2 {
+            font-size: 2.5em;
+        }
+
+        img {
+            width: 15%
+        }
+    }
+}
+
+
+@media screen and (min-width: 600px) { 
+    .skill-container {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 800px) { 
+    .skill-container {
+        font-size: 15px;
+        
+        img {
+            width: 15%;
+        }
+    }
+}
+
+// animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+h2.eightbits.display-title {
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}
+
+
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1d2125; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ff0072; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

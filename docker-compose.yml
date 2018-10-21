@@ -1,0 +1,22 @@
+version: '3'
+services:
+
+  # mongoDB container
+  mongodb:
+    image: mongo:3.6.0
+    ports: 
+      - "27017:27017"
+
+  # main app container
+  web:  
+    build: .
+    volumes:
+     - .:/mybits
+    ports:
+     - "5000:5000"
+    depends_on:
+     - mongodb
+    env_file: .env
+    command:
+      ["./wait-for-it.sh", "mongodb:27017", "-t", "30", "--",
+       "./docker-entrypoint.sh"]

@@ -1,0 +1,97 @@
+.eightbits {
+    font-family: 'Press Start 2P', cursive;
+    color: #22b455;
+    letter-spacing: -1px; 
+}
+
+h2.display-title {
+    text-align: center;
+    position: relative;
+    margin: 2% 0;
+    font-size: 50px;
+    color: #c1e0d2;
+}
+
+.subtitle {
+    color: white;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 1% 0;
+}
+
+.title-and-gif-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1vh;
+
+    img {
+        padding: 0.5%;
+        background: #030804;
+        margin: 2% 2%;
+        width: 15%;
+        height: 17vh;
+        border-radius: 20px;
+    }
+}
+
+.contacts-container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 80%;
+    // overflow-y: scroll;
+    // height: 47vh;    
+}
+
+.contact {
+    width: 30%;
+    height: 15vh;
+    margin: 2% 0%;
+    border-radius: 5%;
+
+    img {
+        padding: 2% 4%;
+        height: 100%;
+        width: 100%;
+    }
+}
+
+.contact:hover {
+    background-color: #2f2d2e;
+}
+
+@media screen and (max-width: 800px) {
+    
+    .subtitle {
+        font-size: 15px;
+    }
+    
+    .title-and-gif-container {
+        h2 {
+            font-size: 1.6em;
+        }
+
+        img {
+            width: 15%
+        }
+    }
+}
+
+
+// animations
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+h2.eightbits.display-title {
+  animation: 0.5s ease-out 0s 1 slideInFromLeft;
+}

@@ -1,0 +1,32 @@
+<nav class="navbar navbar-expand-lg top-nav">
+  <a class="navbar-brand mx-auto" [routerLink]="['/']"><img src="/static/backbits/igp.png" id="igp-logo"></a>
+  </nav>
+
+<nav class="navbar navbar-expand-md bottom-nav navbar-light">
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+    <ul class="navbar-nav mx-auto">
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['/']">Chat Bot</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['about']">About me</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['projects']">Projects</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['skills']">Skills</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" [routerLink]="['contacts']">Contacts</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>

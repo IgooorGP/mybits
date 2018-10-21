@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css?family=Press+Start+2P");
+
+.eightbits {
+    font-family: 'Press Start 2P', cursive;
+    color: #22b455;
+    letter-spacing: -1px; 
+}
+
+.top-nav {
+    background-color: #020204;
+    justify-content: flex-start;
+    border-bottom: 1px solid white;
+}
+
+.nav-item a {
+    font-family: 'Press Start 2P', cursive;
+    font-size: 15px;
+    text-transform: capitalize;
+    letter-spacing: -1px; 
+    margin: 0 30px;
+    // height: 100%;
+    color: #ffffff;
+}
+
+.nav-item a:hover {
+    color: #bbc5ba;
+}
+
+.navbar {
+    padding: 0;
+}
+
+#igp-logo {
+    width: 300px;
+    height: 15vh;
+    margin: auto;
+}
+
+.bottom-nav {
+    background-color: #4b6f4f;
+    // height: 4vh;
+    border-bottom: 1px solid white;
+}
+
+.pipe {
+    max-width: 100px;
+    max-height: 100px;
+    display: none;
+}
+
+@media only screen and (min-width: 700px) {
+    .pipe {
+        display: inline-block;
+    }
+}
+
+@keyframes growFromCenter {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+img#igp-logo {
+  animation: growFromCenter 1s;
+}
+
+.navbar-toggler {
+    font-size: 25px;
+    color: white;
+    background-color: transparent;
+}
+

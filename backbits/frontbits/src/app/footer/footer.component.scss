@@ -1,0 +1,41 @@
+.eightbits {
+    font-family: 'Press Start 2P', cursive;
+    color: #22b455;
+    letter-spacing: -1px; 
+}
+
+.footer {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #50ae54;
+    // height: 3.5vh;
+}
+
+a:visited {
+    color: white;
+}
+
+a {
+    display: block;
+    height: 4vh;
+    margin: 0 10%;
+}
+
+p.eightbits {
+    margin: 1vh 0;
+    color: white;
+    font-size: 0.8em;
+}
+
+@media screen and (max-width: 600px) {
+    
+    p.eightbits {
+        font-size: 10px;
+    }
+    
+}
