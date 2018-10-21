@@ -2,5 +2,8 @@
 # Shell script to start the application by calling Honcho.
 #----------------------------------------------------------
 
-# executes Procfile with gunicorn's web process
+# adds mybits package to the python path
+export PYTHONPATH="$PYTHONPATH:./mybits"
+
+# executes Procfile
 honcho start

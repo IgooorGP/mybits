@@ -35,5 +35,7 @@ class ChatConsumer(WebsocketConsumer):
         text_data_json = json.loads(text_data)
         msg = text_data_json["message"]
 
+        print("message: " + msg)
+
         # echoes back to client the same msg
-        self.send(text_data=json.dumps(msg))
+        # self.send(text_data=json.dumps(msg))

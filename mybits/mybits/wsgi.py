@@ -1,10 +1,6 @@
 """
-WSGI config for mybits project.
-
-It exposes the WSGI callable as a module-level variable named ``application``.
-
-For more information on this file, see
-https://docs.djangoproject.com/en/2.0/howto/deployment/wsgi/
+WSGI entrypoint. Configures Django and then exposes a callable
+named application to be invoke by Gunicorn.
 """
 
 import os

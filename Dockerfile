@@ -14,14 +14,7 @@ RUN chmod +x ./docker-entrypoint.sh
 RUN chmod +x ./wait-for-it.sh
 
 # makes run_tests script to be executable
-RUN chmod +x ./run_tests.sh
+RUN chmod +x ./test.sh
 
 # installs all requirements on the container
 RUN pip install -r requirements.txt
-
-# exposes Flask port
-EXPOSE 5000
-
-# runs when docker container is started (compose executes it)
-# ENTRYPOINT "./docker-entrypoint.sh"
-
