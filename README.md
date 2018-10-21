@@ -41,11 +41,39 @@ Here's a list to understand the file structure of the project:
 ```/backbits/frontbits/angular.json```: angular configurations in order to run with django;  <br/>
 
 
+# Building and running
+
+### Starting the backend and the frontend (angular)
+
 In order to run this application, just clone this repo and run the following command!
 
 ```docker-compose up```
 
 Since this is a fully dockerized application, starting the application is pretty straight forward!
+This starts the development server on port 5000 which serves the Django app.
+
+### Starting the frontend only (angular serve)
+
+In order to run just the angular app (no backend server), just run the following command inside
+the frontbits folder:
+
+```ng serve``` or ```gulp serve```
+
+### Building the application
+
+In order to build the angular app and transfer all of its compiled files to be served by Django,
+just run the following commands:
+
+Inside the fronbits folder, run:
+
+```gulp build```: this will invoke ng build with the appropriate args and transfer the compiled files
+to Django's appropriate folders;
+
+Then, just execute the django server by running the following command on any folder:
+
+```docker-compose up```
+
+That's it! We compiled all the frontend code and transfered them to be served by Django!
 
 # Tests
 
