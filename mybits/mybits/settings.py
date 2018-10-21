@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     "backbits",
+    "channels",
 ]
 
 MIDDLEWARE = [
@@ -68,7 +69,7 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "mybits.wsgi.application"
-
+ASGI_APPLICATION = "mybits.routing.application"  # routing for HTTP requests and Socket connections
 
 # Database
 # https://docs.djangoproject.com/en/2.0/ref/settings/#databases
