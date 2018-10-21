@@ -22,8 +22,14 @@ gulp.task('build', function (cb) {
             next();
         },
         (next) => {
-            console.log("Cleaning previous files...");
+            console.log("Cleaning previous static files...");
             gulp.src(BACKBITS_OUTPUT_PATH_STATIC + "/*.*")
+                .pipe(clean({ force: true }))
+                .on("finish", next);
+        },
+        (next) => {
+            console.log("Cleaning previous html files...");
+            gulp.src(BACKBITS_OUTPUT_PATH_HTML + "/*.*")
                 .pipe(clean({ force: true }))
                 .on("finish", next);
         },
