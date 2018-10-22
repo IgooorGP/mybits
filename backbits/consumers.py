@@ -6,7 +6,7 @@ a non-HTTP based request.
 Rather than looking for a view function, channels will
 look up for a consumer class instance and call its methods.
 """
-
+import logging
 import json
 
 from channels.generic.websocket import WebsocketConsumer
@@ -22,7 +22,7 @@ class ChatConsumer(WebsocketConsumer):
         """ Accepts any web socket connection. """
         self.accept()
 
-    def disconnect(self):
+    def disconnect(self, msg):
         pass
 
     def receive(self, text_data):
@@ -35,7 +35,7 @@ class ChatConsumer(WebsocketConsumer):
         text_data_json = json.loads(text_data)
         msg = text_data_json["message"]
 
-        print("message: " + msg)
+        raise Exception("OI")
 
         # echoes back to client the same msg
         # self.send(text_data=json.dumps(msg))

@@ -18,10 +18,7 @@ export class ChatService {
     }
 
     public sendMsg(msg: string) {
-        console.log(this.websocketUrl);
-        console.log(this.socket);
-
-        // this.socket.emit("new-message", msg);
+        this.socket.emit("message", msg);
     }
 
 }
