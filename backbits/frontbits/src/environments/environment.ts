@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  WS_CHAT_URL: "http://localhost:5005"
+  WS_CHAT_URL: "ws://localhost:5005"
 };
 
 /*

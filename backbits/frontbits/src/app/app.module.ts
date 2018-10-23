@@ -11,7 +11,7 @@ import { Routes, RouterModule } from "@angular/router";
 import { ProjectsComponent } from './main-display/projects/projects.component';
 import { SkillsComponent } from './main-display/skills/skills.component';
 import { ContactsComponent } from './main-display/contacts/contacts.component';
-import { ChatService } from './services/chat.service';
+import { WebSocketService } from './services/web-socket.service';
 
 const appRoutes: Routes = [
   { path: '', component: AskTheBotComponent },  // HomeComponent (empty path ~root)
@@ -38,7 +38,7 @@ const appRoutes: Routes = [
     BrowserModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [ChatService],  // provides the service instance
+  providers: [WebSocketService],  // provides the service instance
   bootstrap: [AppComponent]
 })
 export class AppModule { }
