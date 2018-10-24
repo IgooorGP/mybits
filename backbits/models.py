@@ -1,3 +1,7 @@
-from django.db import models
+"""
+Module that imports the models from the models folder.
+"""
 
-# Create your models here.
+from backbits.models.project import Project
+from backbits.models.skill import Skill
+from backbits.models.about_me import AboutMe
