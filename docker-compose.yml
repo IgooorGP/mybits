@@ -10,7 +10,7 @@ services:
       - MYSQL_USER=conkers
       - MYSQL_PASSWORD=badfurday
     volumes:
-      - ./dbdata:/var/lib/mysql
+      - ./.db:/var/lib/mysql
     command: mysqld --default-authentication-plugin=mysql_native_password
 
   # main app container

@@ -124,5 +124,5 @@ node_modules/
 
 **/frontbits/node_modules
 
-# dbdata
-dbdata
+# db-related data
+.db

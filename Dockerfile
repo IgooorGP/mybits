@@ -5,7 +5,7 @@ FROM python:3.7.0-stretch
 ADD . /mybits
 
 # sets work directory
-WORKDIR mybits
+WORKDIR /mybits
 
 # makes entry point script to be executable
 RUN chmod +x ./docker-entrypoint.sh

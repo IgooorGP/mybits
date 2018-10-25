@@ -2,9 +2,11 @@
 # Shell script to start the application by calling Honcho.
 #----------------------------------------------------------
 
-# migrate
+# migrations
 python manage.py makemigrations
 python manage.py migrate
+
+# fixtures loading
 python manage.py loaddata fixtures.json
 
 # executes Procfile
