@@ -13,9 +13,6 @@ class Project(models.Model):
     Model for a project such as a github project.
     """
 
-    # angular's display title
-    display_title = models.CharField(max_length=50, null=False, blank=False)
-
     # projects display data
     title = models.CharField(max_length=255, null=False, blank=False)
     website_link = models.CharField(max_length=255, null=False, blank=False)

@@ -15,7 +15,7 @@ class SkillSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Skill
-        fields = ("display_title", "title", "website_link", "description", "image_url")
+        fields = ("title", "website_link", "description", "image_url")
 
     def get_image_url(self, image):
         """ Builds an absolute URL of the image. """
