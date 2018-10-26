@@ -5,13 +5,13 @@ Module with the API view for the Project model.
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from ..models.project import Project
-from ..serializers.project import ProjectSerializer
+from ..models.about_me import AboutMe
+from ..serializers.about_me import AboutMeSerializer
 
 
-class ProjectListAPIView(APIView):
+class AboutMeAPIView(APIView):
     """
-    API view for the projects model.
+    API view for the AboutMe model.
     """
 
     # for HTTP get requests
@@ -20,9 +20,9 @@ class ProjectListAPIView(APIView):
         Returns all the Project objects upon an HTTP GET.
         """
         # uses Project model manager to perform an all query
-        projects = Project.objects.all()
+        about_me = AboutMe.objects.all()
 
         # serializes the objects
-        serialized_projects = ProjectSerializer(projects, many=True, context={"request": request})
+        serialized_about_me = AboutMeSerializer(about_me, many=True, context={"request": request})
 
-        return Response(serialized_projects.data)
+        return Response(serialized_about_me.data)

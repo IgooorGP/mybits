@@ -1,14 +1,29 @@
 """
-Module with the skill model.
+Module with the Skill serializer.
 """
-from django.db import models
+from rest_framework import serializers
+
+from ..models.skill import Skill
 
 
-class Skill(models.Model):
+class SkillSerializer(serializers.ModelSerializer):
     """
-    Model for a skill such as Python language.
+    ModelSerializer for the Skill model.
     """
 
-    title = models.CharField(max_length=255, null=False, blank=False)
-    website_link = models.CharField(max_length=255, null=False, blank=False)
-    description = models.TextField(max_length=500, null=False, blank=False)
+    image_url = serializers.SerializerMethodField()
+
+    class Meta:
+        model = Skill
+        fields = ("display_title", "title", "website_link", "description", "image_url")
+
+    def get_image_url(self, image):
+        """ Builds an absolute URL of the image. """
+        # gets the request context
+        request = self.context.get("request")
+        image_url = image.image.name
+
+        # removes api domain (to be removed later)
+        full_image_url = request.build_absolute_uri(image_url)
+
+        return full_image_url.replace("/api/", "/")
