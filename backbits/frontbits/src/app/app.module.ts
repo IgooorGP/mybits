@@ -12,6 +12,8 @@ import { ProjectsComponent } from './main-display/projects/projects.component';
 import { SkillsComponent } from './main-display/skills/skills.component';
 import { ContactsComponent } from './main-display/contacts/contacts.component';
 import { WebSocketService } from './services/web-socket.service';
+import { MyBitsService } from './services/mybits.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '', component: AskTheBotComponent },  // HomeComponent (empty path ~root)
@@ -36,9 +38,10 @@ const appRoutes: Routes = [
   imports: [
     FormsModule,
     BrowserModule,
+    HttpClientModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [WebSocketService],  // provides the service instance
+  providers: [WebSocketService, MyBitsService],  // provides the service instance 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
