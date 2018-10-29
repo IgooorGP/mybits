@@ -42,23 +42,10 @@ h2.display-title {
     align-items: center;
     font-size: 10px;
     margin: 4% 0;
-    // margin: 5vh 0;
-    // min-height: 15vh;
     min-height: 150px;
-
-    // img {
-    //     margin: 0% 20px;
-    //     width: 25%;
-    //     // height: 20vh;
-    //     min-height: 100px;
-    //     background: white;
-    //     border-radius: 15px;
-    //     border: 1px solid white;
-    // }
 }
 
 .skill-image-container {
-    width: 40%;
     height: 100%;
     min-width: 100px;
     min-height: 100px;
@@ -73,11 +60,11 @@ h2.display-title {
 }
 
 .skill-description-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    // height: 15vh;
         
     p {
         margin: 0;
@@ -99,9 +86,14 @@ h2.display-title {
         margin-bottom: 1vh;
     }
 
-    p.skill-description {
+    p.skill-description-itself {
         color: white;
+        word-break: break-word;
     }
+}
+
+.skill-description-itself {
+    word-wrap: break-word;
 }
 
 @media screen and (max-width: 500px) {

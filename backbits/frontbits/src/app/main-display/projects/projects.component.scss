@@ -53,7 +53,6 @@ h2.display-title {
 }
 
 .project-image-container {
-    width: 40%;
     height: 100%;
     min-width: 100px;
     min-height: 100px;
@@ -68,11 +67,11 @@ h2.display-title {
 }
 
 .project-description-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    // height: 15vh;
+    align-items: flex-start;    
         
     p { 
         margin: 0;
@@ -88,12 +87,10 @@ h2.display-title {
 
     p.project-description-itself {
         color: white;
+        word-break: break-word;
     }
 }
 
-.project-description-itself {
-    word-wrap:break-word;
-}
 
 @media screen and (max-width: 800px) {
     .title-and-gif-container {

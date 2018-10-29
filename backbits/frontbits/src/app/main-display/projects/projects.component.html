@@ -4,8 +4,8 @@
   <img src="/static/backbits/space_invader.gif">
 </div>
 
-<ul class="projects-container">
-  <li *ngFor="let project of projectsArray" class="project-container">
+<div class="projects-container">
+  <div *ngFor="let project of projectsArray" class="project-container">
     <div class="project-image-container">
       <img src="{{ project.imageUrl }}" class=" project-picture">
     </div>
@@ -21,8 +21,8 @@
         {{ project.description }}
       </p>
     </div>
-  </li>
-</ul>
+  </div>
+</div>
 
 
 <!-- mocks for development -->
