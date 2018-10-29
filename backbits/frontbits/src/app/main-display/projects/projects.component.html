@@ -4,11 +4,35 @@
   <img src="/static/backbits/space_invader.gif">
 </div>
 
+<ul class="projects-container">
+  <li *ngFor="let project of projectsArray" class="project-container">
+    <div class="project-image-container">
+      <img src="{{ project.imageUrl }}" class=" project-picture">
+    </div>
+
+    <div class="project-description-container">
+      <p class="project-description-title eightbits">
+        {{ project.title }}
+      </p>
+
+      <a href="{{ project.websiteLink }}" class="project-description-link">{{ project.websiteLink }}</a>
+
+      <p class="project-description-itself">
+        {{ project.description }}
+      </p>
+    </div>
+  </li>
+</ul>
+
+
+<!-- mocks for development -->
+<!-- 
 <div class="projects-container">
 
   <div class="project-container">
-    <img src="/static/backbits/github.svg" class="project-picture">
-
+    <div class="project-image-container">
+      <img src="/static/backbits/github.svg" class="project-picture">
+    </div>
     <div class="project-description-container">
 
       <p class="project-description-title eightbits">
@@ -26,8 +50,9 @@
   </div>
 
   <div class="project-container">
-    <img src="/static/backbits/github.svg" class="project-picture">
-
+    <div class="project-image-container">
+      <img src="/static/backbits/github.svg" class="project-picture">
+    </div>
     <div class="project-description-container">
 
       <p class="project-description-title eightbits">
@@ -45,8 +70,9 @@
   </div>
 
   <div class="project-container">
-    <img src="/static/backbits/github.svg" class="project-picture">
-
+    <div class="project-image-container">
+      <img src="/static/backbits/github.svg" class="project-picture">
+    </div>
     <div class="project-description-container">
 
       <p class="project-description-title eightbits">
@@ -62,4 +88,4 @@
       </p>
     </div>
   </div>
-</div>
+</div> -->
