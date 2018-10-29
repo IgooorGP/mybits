@@ -7,7 +7,7 @@
 h2.display-title {
     text-align: center;
     position: relative;
-    margin: 2% 0 4% 0;
+    margin: 2% 0 2% 0;
     font-size: 50px;
 }
 
@@ -28,6 +28,7 @@ h2.display-title {
         margin: 2% 4%;
         width: 20%;
         height: 12vh;
+        min-height: 40px;
         border-radius: 20px;
     }
 }
@@ -43,7 +44,6 @@ h2.display-title {
     justify-content: flex-start;
     margin-right: 5%;
     width: 70%;
-    height: 60vh;
 }
 
 .inner-display-img-area {
@@ -52,7 +52,7 @@ h2.display-title {
     flex-direction: column;
     align-items: center;
     width: 40%;
-    height: 30vh;
+    // height: 30vh;
 }
 
 .inner-display-img-area p.eightbits {
@@ -70,7 +70,7 @@ h2.display-title {
 
 .inner-display-img-area img {
     width: 100%;
-    height: calc(100% - 25px);
+    min-height: 200px;
 }
 
 .inner-display-img-area p {
@@ -79,8 +79,8 @@ h2.display-title {
 }
 
 .start-button {
-    margin: 3% 0 0 60%;
-    font-size: 10px;
+    margin: 3% 0 3% 60%;
+    font-size: 1.0em;
     width: auto;
     color: black;
     border: 1px gray solid;
@@ -89,34 +89,42 @@ h2.display-title {
 }
 
 .speech-bubble {
-    height: 15vh;
-	position: relative;
+    margin: 0px;
+    min-height: 80px;
 	background: #0f110f;
-    border-radius: .4em;
+    border-radius: 10px;
     border: 1px solid green;
-    overflow-y: scroll;
+    overflow-y: auto;
     color: #0ff359;
 }
 
 p.speech-bubble {
     padding: 2% 4%;
+    min-height: 100px;
+}
+
+p.speech-bubble.eightbits {
+    margin: 0px;
 }
 
 .bot-answer-area p {
     margin: 1vh 0;
 }
+
 .speech-bubble-user {
+    font-size: 1.0em;
     padding: 2% 4%;        
-    height: 15vh;
+    // height: 15vh;
 	position: relative;
 	background: #0e0b0e;
-    border-radius: .4em;
+    border-radius: 10px;
     border: 1px solid green;
 }
 
 .user-input-text {
+    min-height: 100px;
     color: white;
-    font-size: 20px;
+    font-size: 1.0em;
 }
 
 
@@ -144,14 +152,6 @@ p.speech-bubble {
             font-size: 30px;
         }
     }
-
-    // .inner-display-img-area {
-    //     display: none;        
-    // }
-
-    // .inner-display-text-area {
-    //     margin: 0 auto;
-    // }
 
     .user-input-text {        
         font-size: 12px;
@@ -183,7 +183,7 @@ p.speech-bubble {
     .start-button {
         font-size: 20px;
         padding: 10px;
-        margin: 2vh 0 0 70%;
+        margin: 2% 0 2% 70%;
         width: auto;
     }
 }
@@ -252,7 +252,6 @@ h2.eightbits.display-title {
 }
 
 p.speech-bubble.eightbits {
-  margin: 10px 0 0 0px;
   width: 100%;
   animation: type 0.6s steps(60, end); 
 }
@@ -269,12 +268,14 @@ p.speech-bubble.eightbits {
 
 /* Track */
 ::-webkit-scrollbar-track {
-    background: #1d2125; 
+    background: #1d2125;
+    border-radius: 10px;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: #42f719; 
+    background: #42f719;
+    border-radius: 10px;
 }
 
 /* Handle on hover */

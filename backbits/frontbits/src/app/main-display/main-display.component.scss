@@ -1,25 +1,39 @@
 .container {
-    opacity: 0.97;
-    border-radius: 10px;
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    top: 1.5vh;
-    bottom: 1.5vh;
-    background-color: #030804;
-    height: 73vh;
-    z-index: 10;
-    border: 1px solid white;
-}
+    height: 70vh;
+    margin: 20px auto;
 
-.test {
-    width: 100%;
-    background-size: cover;
-    height: 76vh;
+    opacity: 0.97;
+    
+    background-color: #030804;
+
+    border: 1px solid white;
+    border-radius: 10px;
+    overflow: auto;
 }
 
 .eightbits {
     font-family: 'Press Start 2P', cursive;
     color: #22b455;
     letter-spacing: -1px; 
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #1d2125; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #42f719;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
 }

@@ -13,6 +13,18 @@ gulp.task('build', function (cb) {
 
     async.series([
         (next) => {
+            console.log("Cleaning previous static files...");
+            gulp.src(BACKBITS_OUTPUT_PATH_STATIC)
+                .pipe(clean({ force: true }))
+                .on("finish", next);
+        },
+        (next) => {
+            console.log("Cleaning previous html files...");
+            gulp.src(BACKBITS_OUTPUT_PATH_HTML)
+                .pipe(clean({ force: true }))
+                .on("finish", next);
+        },
+        (next) => {
             console.log("Executing angular build (wait for stdout output) ...");
 
             let deployUrl = "/static/backbits/";  // necessary for django static collection
@@ -20,18 +32,6 @@ gulp.task('build', function (cb) {
 
             console.log(execSync.toString());  // logs after process
             next();
-        },
-        (next) => {
-            console.log("Cleaning previous static files...");
-            gulp.src(BACKBITS_OUTPUT_PATH_STATIC + "/*.*")
-                .pipe(clean({ force: true }))
-                .on("finish", next);
-        },
-        (next) => {
-            console.log("Cleaning previous html files...");
-            gulp.src(BACKBITS_OUTPUT_PATH_HTML + "/*.*")
-                .pipe(clean({ force: true }))
-                .on("finish", next);
         },
         (next) => {
             console.log("Moving index.html to django's template folder...");

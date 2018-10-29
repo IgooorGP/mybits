@@ -1,22 +1,28 @@
 version: '3'
 services:
 
-  # mongoDB container
-  mongodb:
-    image: mongo:3.6.0
-    ports: 
-      - "27017:27017"
+  # mysql
+  db:
+    image: mysql
+    environment:
+      - MYSQL_ROOT_PASSWORD=docker
+      - MYSQL_DATABASE=mybits_db
+      - MYSQL_USER=conkers
+      - MYSQL_PASSWORD=badfurday
+    volumes:
+      - ./.db:/var/lib/mysql
+    command: mysqld --default-authentication-plugin=mysql_native_password
 
   # main app container
-  web:  
+  web:
     build: .
     volumes:
      - .:/mybits
-    ports:
-     - "5000:5000"
-    depends_on:
-     - mongodb
     env_file: .env
+    ports:
+     - "${APP_PORT}:${APP_PORT}"
+    depends_on:
+     - db
     command:
-      ["./wait-for-it.sh", "mongodb:27017", "-t", "30", "--",
+      ["./wait-for-it.sh", "db:3306", "-t", "120", "--",
        "./docker-entrypoint.sh"]

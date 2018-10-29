@@ -25,12 +25,13 @@ h2.display-title {
 
     p {
         width: 100%;
-        margin: -5% 2% 0 7%;
+        margin: -2% 2% 0 7%;
         font-size: 10px;
     }
 
     img {
         height: 20vh;
+        min-height: 150px;  // necessary for small heights
         width: 80%;
         border-radius: 15px;
         margin: 0 0 30px 7%;
@@ -42,10 +43,9 @@ h2.display-title {
     }
 }
 
-
 .about-me-text-container {
     height: 55vh;
-    overflow-y: auto;
+    // overflow-y: auto;
     width: 80%;   
     padding: 0 2% 0 2%;
 
@@ -54,7 +54,6 @@ h2.display-title {
         font-size: 20px;
     }
 }
-
 
 @media screen and (max-width: 700px) {
     .about-me-picture-container {
