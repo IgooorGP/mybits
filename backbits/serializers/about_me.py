@@ -32,20 +32,24 @@ class AboutMeSerializer(serializers.ModelSerializer):
         """ Builds an absolute URL of the image. """
         # gets the request context
         request = self.context.get("request")
-        image_url = image.image.name
 
-        # removes api domain (to be removed later)
-        full_image_url = request.build_absolute_uri(image_url)
+        # gets the filesystem uri
+        filesystem_image_url = image.image.name
 
-        return full_image_url.replace("/api/", "/")
+        # builds the full image url by removing unnecessary os folders
+        full_image_url = request.build_absolute_uri(filesystem_image_url).replace("/api/backbits/", "/")
+
+        return full_image_url
 
     def get_resume_url(self, resume):
-        """ Builds an absolute URL of the resume. """
+        """ Builds an absolute URL of the image. """
         # gets the request context
         request = self.context.get("request")
-        resume_url = resume.resume.name
 
-        # removes api domain (to be removed later)
-        full_resume_url = request.build_absolute_uri(resume_url)
+        # gets the filesystem uri
+        filesystem_resume_url = resume.resume.name
 
-        return full_resume_url.replace("/api/", "/")
+        # builds the full image url by removing unnecessary os folders
+        full_resume_url = request.build_absolute_uri(filesystem_resume_url).replace("/api/backbits/", "/")
+
+        return full_resume_url
