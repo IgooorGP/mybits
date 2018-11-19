@@ -10,4 +10,4 @@ set -a
 set +a
 
 # runs nosetests to discover all tests
-exec nosetests -s --with-watch -vv --with-coverage --cover-package=. --cover-erase
+exec nosetests -s --with-watch -v --with-coverage --cover-package=. --cover-erase
