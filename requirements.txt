@@ -8,3 +8,4 @@ Gunicorn==19.7.0
 honcho==1.0.1
 requests==2.20
 fuzzywuzzy==0.17.0
+python-Levenshtein==0.12.0

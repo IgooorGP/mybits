@@ -31,7 +31,14 @@ export class AskTheBotComponent implements OnInit {
     // must subscribe
     this.webSocket.subscribe({
       next: msg => {
-        this.botMsg = msg["data"];
+        let msgData = msg["data"];
+
+        if (msgData === "<start/>") {
+          this.botMsg = "";
+        } else {
+          this.botMsg += msg["data"];
+        }
+
       },
       error: err => console.error('something wrong occurred: ' + err),
       complete: () => console.log('done'),
