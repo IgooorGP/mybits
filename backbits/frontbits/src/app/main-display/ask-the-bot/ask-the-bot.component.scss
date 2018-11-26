@@ -69,7 +69,7 @@ h2.display-title {
 }
 
 .inner-display-img-area img {
-    width: 100%;
+    width: 90%;
     min-height: 200px;
 }
 
@@ -215,14 +215,14 @@ h2.eightbits.display-title {
 }
 
 .inner-display-img-area img {
-    -webkit-animation: jump 1.5s ease 0s 2 normal ;
-    animation: jump 1.5s ease 0s 2 normal ;
+    -webkit-animation: jump 1.5s ease 0s 1 normal ;
+    animation: jump 1.5s ease 0s 1 normal ;
 }
 
-.inner-display-img-area:hover {
-    -webkit-animation: jump 1.5s ease 0s 2 normal ;
-    animation: jump 1.5s ease 0s 2 normal ;
- }
+// .inner-display-img-area:hover {
+//     -webkit-animation: jump 1.5s ease 0s 2 normal ;
+//     animation: jump 1.5s ease 0s 2 normal ;
+//  }
 
 @-webkit-keyframes jump {
   0%{

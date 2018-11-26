@@ -54,3 +54,6 @@ class ChatConsumer(WebsocketConsumer):
 
             # actual socket sending
             self.send(letter)
+
+        # msg is over
+        self.send(r"<end/>")
