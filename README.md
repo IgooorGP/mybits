@@ -82,3 +82,65 @@ In order to test the application, just run the following command which triggers 
 ```docker-compose nosetests```
 
 There are some options to trigger coverage with this!
+
+
+# Deployment instructions (manual deploy)
+
+This project is hosted on a Google Cloud Computer Engine instance. This Google service
+offers a "bare metal" solution for we have to manually configure the instance server. There are,
+obviously, more modern options than this one but due mainly to costs and for the sake of learning
+server configuration I've choosen this one.
+
+## Server configuration
+
+This project uses a VM instance which comes with Debian 9 as the OS.
+
+### Python 3.7 installation
+
+Installing the dev pre-requisites in order to compile Cython 3.7. Using the
+binary ```apt-get``` to install dependencies from the Ubuntu repository
+into ```/usr/bin```:
+
+```
+sudo apt-get install build-essential checkinstall
+sudo apt-get install libreadline-gplv2-dev libncursesw5-dev libssl-dev \
+    libsqlite3-dev tk-dev libgdbm-dev libc6-dev libbz2-dev libffi-dev
+```
+
+Now, we move to the ```/usr/src``` folder where src could of the system lies. Then, 
+we perform an HTTP get with the binary ```wget``` to get a compressed tar version of Python:
+
+```
+cd /usr/src
+sudo wget https://www.python.org/ftp/python/3.7.0/Python-3.7.0.tgz
+```
+
+Uncompress the tar file:
+
+```
+sudo tar xzf Python-3.7.0.tgz
+```
+
+Compile Python3.7 from source:
+
+```
+cd Python-3.7.0
+sudo ./configure --enable-optimizations
+sudo make altinstall  # necessary not to replace the default python binary file
+```
+
+Check the final version:
+
+```
+python3.7 -V
+```
+
+### PIP installation for Python 2 and 3
+
+Update the Ubuntu's package repository list and install pip:
+
+```
+sudo apt update
+sudo apt install python-pip  # python 2.x
+sudo apt install python3-pip  # python 3.x
+```

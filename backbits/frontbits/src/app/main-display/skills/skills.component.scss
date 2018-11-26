@@ -20,7 +20,8 @@ h2.display-title {
 
     img {
         padding: 0.5%;
-        background: #030804;
+        // background: #030804;
+        background: #061725;
         margin: 2% 0%;
         width: 20%;
         // height: 20vh;
@@ -42,27 +43,29 @@ h2.display-title {
     align-items: center;
     font-size: 10px;
     margin: 4% 0;
-    // margin: 5vh 0;
-    // min-height: 15vh;
     min-height: 150px;
+}
+
+.skill-image-container {
+    height: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    margin: 0 20px;
+    background: white;
+    border-radius: 10px;
 
     img {
-        margin: 0% 20px;
-        width: 25%;
-        // height: 20vh;
-        min-height: 100px;
-        background: white;
-        border-radius: 15px;
-        border: 1px solid white;
+        width: 100%;
+        height: 100%;
     }
 }
 
 .skill-description-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
-    // height: 15vh;
         
     p {
         margin: 0;
@@ -84,14 +87,19 @@ h2.display-title {
         margin-bottom: 1vh;
     }
 
-    p.skill-description {
+    p.skill-description-itself {
         color: white;
+        word-break: break-word;
     }
+}
+
+.skill-description-itself {
+    word-wrap: break-word;
 }
 
 @media screen and (max-width: 500px) {
     .skill-container {
-       margin: 5% 0;
+        margin: 10% 0;
     }
 
     .title-and-gif-container {
@@ -128,10 +136,6 @@ h2.display-title {
 @media screen and (min-width: 800px) { 
     .skill-container {
         font-size: 15px;
-        
-        img {
-            width: 15%;
-        }
     }
 }
 

@@ -5,61 +5,89 @@
 </div>
 
 <div class="skills-container">
-
-  <div class="skill-container">
-    <img src="/static/backbits/controller.svg" class="project-picture">
-
-    <div class="skill-description-container">
-
-      <p class="skill-description-title eightbits">
-        My Project 1
-      </p>
-
-      <p class="project-description-level"><span class="level-title">Level:</span><span class="level">Advanced</span></p>
-
-      <p class="skill-description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-      </p>
+  <div *ngFor="let skill of skillsArray" class="skill-container">
+    <div class="skill-image-container">
+      <img src="{{ skill.imageUrl }}" class=" skill-picture">
     </div>
-  </div>
-
-  <div class="skill-container">
-    <img src="/static/backbits/controller.svg" class="project-picture">
 
     <div class="skill-description-container">
-
       <p class="skill-description-title eightbits">
-        My Project 1
+        {{ skill.title }}
       </p>
 
-      <p class="project-description-level"><span class="level-title">Level:</span><span class="level">Advanced</span></p>
+      <p class="skill-description-level"><span class="level-title">Level:</span><span class="level">Advanced</span></p>
 
-      <p class="skill-description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-      </p>
-    </div>
-  </div>
-
-  <div class="skill-container">
-    <img src="/static/backbits/controller.svg" class="project-picture">
-
-    <div class="skill-description-container">
-
-      <p class="skill-description-title eightbits">
-        My Project 1
-      </p>
-
-      <p class="project-description-level"><span class="level-title">Level:</span><span class="level">Advanced</span></p>
-
-      <p class="skill-description">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      <p class="skill-description-itself">
+        {{ skill.description }}
       </p>
     </div>
   </div>
 </div>
+
+<!-- mocks for development -->
+<!-- 
+<div class="skills-container">
+
+  <div class="skill-container">
+    <div class="skill-image-container">
+      <img src="/static/backbits/controller.svg">
+    </div>
+
+    <div class="skill-description-container">
+
+      <p class="skill-description-title eightbits">
+        My Project 1
+      </p>
+
+      <p class="project-description-level"><span class="level-title">Level:</span><span class="level">Advanced</span></p>
+
+      <p class="skill-description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+  </div>
+
+  <div class="skill-container">
+    <div class="skill-image-container">
+      <img src="/static/backbits/controller.svg">
+    </div>
+
+    <div class="skill-description-container">
+
+      <p class="skill-description-title eightbits">
+        My Project 1
+      </p>
+
+      <p class="project-description-level"><span class="level-title">Level:</span><span class="level">Advanced</span></p>
+
+      <p class="skill-description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+  </div>
+
+  <div class="skill-container">
+    <div class="skill-image-container">
+      <img src="/static/backbits/controller.svg">
+    </div>
+
+    <div class="skill-description-container">
+
+      <p class="skill-description-title eightbits">
+        My Project 1
+      </p>
+
+      <p class="project-description-level"><span class="level-title">Level:</span><span class="level">Advanced</span></p>
+
+      <p class="skill-description">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+  </div>
+</div> -->

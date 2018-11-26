@@ -1,3 +1,9 @@
+ul, li {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 .eightbits {
     font-family: 'Press Start 2P', cursive;
     color: #22b455;
@@ -35,7 +41,6 @@ h2.display-title {
     display: flex;
     flex-direction: column;
     align-content: flex-start;
-    // overflow-y: auto; now the main container controls overflow!
     height: 45vh;
 }
 
@@ -44,27 +49,29 @@ h2.display-title {
     align-items: center;
     font-size: 10px;
     margin: 4% 0;
-    // margin: 5vh 0;
-    // height: 200px;    
     min-height: 150px;
+}
+
+.project-image-container {
+    height: 100%;
+    min-width: 100px;
+    min-height: 100px;
+    margin: 0 20px;
+    background: white;
+    border-radius: 10px;
 
     img {
-        margin: 0% 20px;
-        width: 25%;
-        // height: 20vh;
-        min-height: 100px;
-        background: white;
-        border-radius: 15px;
-        border: 1px solid white;
+        width: 100%;
+        height: 100%;
     }
 }
 
 .project-description-container {
+    width: 90%;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    align-items: flex-start;
-    // height: 15vh;
+    align-items: flex-start;    
         
     p { 
         margin: 0;
@@ -80,8 +87,10 @@ h2.display-title {
 
     p.project-description-itself {
         color: white;
+        word-break: break-word;
     }
 }
+
 
 @media screen and (max-width: 800px) {
     .title-and-gif-container {
@@ -98,7 +107,7 @@ h2.display-title {
 
 @media screen and (max-width: 500px) {
     .project-container {
-        margin: 5% 0;
+        margin: 10% 0;
     }
     
     .title-and-gif-container {

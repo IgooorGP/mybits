@@ -6,11 +6,10 @@ a non-HTTP based request.
 Rather than looking for a view function, channels will
 look up for a consumer class instance and call its methods.
 """
-import re
-import json
 import logging
+import time
 
-
+from backbits.bot.bot import ChatBot
 from channels.generic.websocket import WebsocketConsumer
 
 
@@ -19,6 +18,8 @@ class ChatConsumer(WebsocketConsumer):
     Consumer used by the chat routes to handle
     web socket connections.
     """
+
+    SEND_DELAY = 0.02
 
     def connect(self):
         """ Accepts any web socket connection. """
@@ -36,4 +37,23 @@ class ChatConsumer(WebsocketConsumer):
         """
         logging.info("Received new message: %s", text_data)
 
-        self.send(text_data)
+        bot = ChatBot()
+
+        raw_question = text_data
+        answer = bot.answer(raw_question)
+
+        logging.info("Returning answer: %s", answer)
+
+        # sends the signal of the beginning of a new msg
+        self.send(r"<start/>")
+
+        # sends letter by letter through the socket connection
+        for letter in answer:
+            # small delay for a nice effect purposes
+            time.sleep(self.SEND_DELAY)
+
+            # actual socket sending
+            self.send(letter)
+
+        # msg is over
+        self.send(r"<end/>")

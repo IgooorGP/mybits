@@ -13,12 +13,13 @@ from .api_views.projects import ProjectListAPIView
 from .api_views.skills import SkillsListAPIView
 
 urlpatterns = [
-    # non-api routes
-    url(r"^$", views.index, name="index"),
     # django restframework API routes
     url("api/projects", ProjectListAPIView.as_view()),
     url("api/skills", SkillsListAPIView.as_view()),
     url("api/about_me", AboutMeAPIView.as_view()),
+    # non-api routes
+    url(r"^$", views.index, name="index"),
+    url(r"^.*/$", views.index, name="index"),
 ]
 
 if settings.DEBUG:

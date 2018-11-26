@@ -5,61 +5,87 @@
 </div>
 
 <div class="projects-container">
-
-  <div class="project-container">
-    <img src="/static/backbits/github.svg" class="project-picture">
-
-    <div class="project-description-container">
-
-      <p class="project-description-title eightbits">
-        My Project 1
-      </p>
-
-      <a href="https://github.com" class="project-description-link">https://github.com</a>
-
-      <p class="project-description-itself">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-      </p>
+  <div *ngFor="let project of projectsArray" class="project-container">
+    <div class="project-image-container">
+      <img src="{{ project.imageUrl }}" class=" project-picture">
     </div>
-  </div>
-
-  <div class="project-container">
-    <img src="/static/backbits/github.svg" class="project-picture">
 
     <div class="project-description-container">
-
       <p class="project-description-title eightbits">
-        My Project 1
+        {{ project.title }}
       </p>
 
-      <a href="https://github.com" class="project-description-link">https://github.com</a>
+      <a href="{{ project.websiteLink }}" class="project-description-link">{{ project.websiteLink }}</a>
 
       <p class="project-description-itself">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-      </p>
-    </div>
-  </div>
-
-  <div class="project-container">
-    <img src="/static/backbits/github.svg" class="project-picture">
-
-    <div class="project-description-container">
-
-      <p class="project-description-title eightbits">
-        My Project 1
-      </p>
-
-      <a href="https://github.com" class="project-description-link">https://github.com</a>
-
-      <p class="project-description-itself">
-        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
-        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        {{ project.description }}
       </p>
     </div>
   </div>
 </div>
+
+
+<!-- mocks for development -->
+<!-- 
+<div class="projects-container">
+
+  <div class="project-container">
+    <div class="project-image-container">
+      <img src="/static/backbits/github.svg" class="project-picture">
+    </div>
+    <div class="project-description-container">
+
+      <p class="project-description-title eightbits">
+        My Project 1
+      </p>
+
+      <a href="https://github.com" class="project-description-link">https://github.com</a>
+
+      <p class="project-description-itself">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-container">
+    <div class="project-image-container">
+      <img src="/static/backbits/github.svg" class="project-picture">
+    </div>
+    <div class="project-description-container">
+
+      <p class="project-description-title eightbits">
+        My Project 1
+      </p>
+
+      <a href="https://github.com" class="project-description-link">https://github.com</a>
+
+      <p class="project-description-itself">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+  </div>
+
+  <div class="project-container">
+    <div class="project-image-container">
+      <img src="/static/backbits/github.svg" class="project-picture">
+    </div>
+    <div class="project-description-container">
+
+      <p class="project-description-title eightbits">
+        My Project 1
+      </p>
+
+      <a href="https://github.com" class="project-description-link">https://github.com</a>
+
+      <p class="project-description-itself">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
+        the industry's standard dummy text ever since the 1500s. Lorem Ipsum is simply dummy text of the printing and
+        typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+      </p>
+    </div>
+  </div>
+</div> -->
