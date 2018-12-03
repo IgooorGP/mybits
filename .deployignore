@@ -113,9 +113,14 @@ node_modules/
 **/*.d.ts
 
 **/frontbits/node_modules
+.DS_Store
 
 # db-related data
 .db
 
-# deploy-related data
+# git folder cannot be deployed
+.git
+
+# deploy config files
 .deployconfig
+.deployignore
