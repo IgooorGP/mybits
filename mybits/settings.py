@@ -7,10 +7,10 @@ import os
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "g1fn#fg7-u!56ld2jqd=km^2ysjmc3zs5@@4fuepo*49387tqa"
+SECRET_KEY = os.environ.get("DJANGO_SETTINGS_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DEBUG"))
+DEBUG = bool(os.environ.get("DJANGO_SETTINGS_DEBUG"))
 
 ALLOWED_HOSTS = []
 
@@ -62,11 +62,11 @@ ASGI_APPLICATION = "mybits.routing.application"  # routing for HTTP requests and
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.mysql",
-        "NAME": "mybits_db",
-        "USER": "conkers",
-        "PASSWORD": "badfurday",
-        "HOST": "db",
-        "PORT": 3306,
+        "NAME": os.environ.get("DJANGO_SETTINGS_DB_NAME"),
+        "USER": os.environ.get("DJANGO_SETTINGS_DB_USER"),
+        "PASSWORD": os.environ.get("DJANGO_SETTINGS_DB_PASSWORD"),
+        "HOST": os.environ.get("DJANGO_SETTINGS_DB_HOST"),
+        "PORT": int(os.environ.get("DJANGO_SETTINGS_DB_PORT")),
     }
 }
 
