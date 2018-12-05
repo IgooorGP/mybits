@@ -119,3 +119,6 @@ node_modules/
 
 # deploy-related data
 .deployconfig
+
+# static files
+/static

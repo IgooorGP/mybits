@@ -9,5 +9,8 @@ python manage.py migrate
 # fixtures loading
 python manage.py loaddata fixtures.json
 
+# static collection
+# python manage.py collectstatic
+
 # executes Procfile
 honcho start

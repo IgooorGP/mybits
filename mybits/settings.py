@@ -94,6 +94,8 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = "/static/"
+
+# For production deploy
+STATIC_ROOT = os.environ.get("DJANGO_SETTINGS_STATIC_ROOT")
