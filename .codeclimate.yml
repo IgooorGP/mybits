@@ -35,4 +35,4 @@ exclude_patterns:
   - "**/.dist/"
   - "backbits/frontbits/"
   - "backbits/tests/"
-  - "**/node_modules/"
+  - "**/node_modules/**"
