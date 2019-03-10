@@ -30,7 +30,7 @@ plugins:
 exclude_patterns:
   - "**/.venv/"
   - "**/.data/"
-  - "**/.pytest_cache/""
+  - "**/.pytest_cache/"
   - "**/.tox/"
   - "**/.dist/"
   - "backbits/frontbits/"
