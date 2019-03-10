@@ -1,6 +1,7 @@
 """
 Django settings for mybits project.
 """
+import ast
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
@@ -10,9 +11,11 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get("DJANGO_SETTINGS_SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = bool(os.environ.get("DJANGO_SETTINGS_DEBUG"))
+DEBUG = ast.literal_eval(os.environ.get("DJANGO_SETTINGS_DEBUG"))
 
-ALLOWED_HOSTS = []
+# The nginx proxy server will send the requests to gunicorn
+# with the header: Host: "ipeternella.com"
+ALLOWED_HOSTS = [os.environ.get("DJANGO_ALLOWED_HOST")]
 
 # Application definition
 INSTALLED_APPS = [
@@ -56,12 +59,14 @@ TEMPLATES = [
 ]
 
 WSGI_APPLICATION = "mybits.wsgi.application"
-ASGI_APPLICATION = "mybits.routing.application"  # routing for HTTP requests and Socket connections
+ASGI_APPLICATION = (
+    "mybits.routing.application"
+)  # routing for HTTP requests and Socket connections
 
 # Database
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.mysql",
+        "ENGINE": os.environ.get("DJANGO_SETTINGS_DB_ENGINE"),
         "NAME": os.environ.get("DJANGO_SETTINGS_DB_NAME"),
         "USER": os.environ.get("DJANGO_SETTINGS_DB_USER"),
         "PASSWORD": os.environ.get("DJANGO_SETTINGS_DB_PASSWORD"),
@@ -73,14 +78,18 @@ DATABASES = {
 
 # Password validation
 AUTH_PASSWORD_VALIDATORS = [
-    {"NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"},
+    {
+        "NAME": "django.contrib.auth.password_validation.UserAttributeSimilarityValidator"
+    },
     {"NAME": "django.contrib.auth.password_validation.MinimumLengthValidator"},
     {"NAME": "django.contrib.auth.password_validation.CommonPasswordValidator"},
     {"NAME": "django.contrib.auth.password_validation.NumericPasswordValidator"},
 ]
 
 # Rest framework api responses as PURE jsons
-REST_FRAMEWORK = {"DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",)}
+REST_FRAMEWORK = {
+    "DEFAULT_RENDERER_CLASSES": ("rest_framework.renderers.JSONRenderer",)
+}
 
 
 # Internationalization
@@ -97,5 +106,9 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = "/static/"
 
+# File uploading
+MEDIA_URL = "/media/"
+
 # For production deploy
 STATIC_ROOT = os.environ.get("DJANGO_SETTINGS_STATIC_ROOT")
+MEDIA_ROOT = os.environ.get("DJANGO_SETTINGS_MEDIA_ROOT")

@@ -1,0 +1,22 @@
+[
+{
+    "model": "backbits.skill",
+    "pk": 1,
+    "fields": {
+        "title": "Python",
+        "level": "Advanced",
+        "description": "Python is definitely in my wheel house! As my main language, I adore to develop projects using it!",
+        "image": "backbits/skills_python.png"
+    }
+},
+{
+    "model": "backbits.skill",
+    "pk": 2,
+    "fields": {
+        "title": "Javascript",
+        "level": "Advanced",
+        "description": "JS is a language that I'm very comfortable to create projects with!",
+        "image": "backbits/skills_js.png"
+    }
+}
+]

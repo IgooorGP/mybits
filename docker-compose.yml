@@ -1,6 +1,19 @@
 version: '3'
 services:
 
+  # nginx
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./infra/nginx/nginx.local.conf:/etc/nginx/nginx.conf
+      - ./static/mybits:/var/www/mybits/static/mybits/  # root for static files
+      - ./media/mybits:/var/www/mybits/media/mybits/  # root for static files
+    ports:
+      - 80:80
+      - 443:443
+    depends_on:
+      - web
+
   # mysql
   db:
     image: mysql
@@ -24,5 +37,6 @@ services:
     depends_on:
      - db
     command:
-      ["./wait-for-it.sh", "db:3306", "-t", "120", "--",
+      ["./wait-for-it.sh",
+       "db:3306", "-t", "120", "--",
        "./docker-entrypoint.sh"]

@@ -5,28 +5,45 @@
 </div>
 
 <div class="projects-container">
-  <div *ngFor="let project of projectsArray" class="project-container">
-    <div class="project-image-container">
-      <img src="{{ project.imageUrl }}" class=" project-picture">
+  <div *ngIf="!loading; else loadingData">
+
+    <div *ngIf="!hasError; else errorData">
+      <div *ngFor="let project of projectsArray" class="project-container">
+        <div class="project-image-container">
+          <img src="{{ project.imageUrl }}" class=" project-picture">
+        </div>
+
+        <div class="project-description-container">
+          <p class="project-description-title eightbits">
+            {{ project.title }}
+          </p>
+
+          <a href="{{ project.websiteLink }}" class="project-description-link">{{ project.websiteLink }}</a>
+
+          <p class="project-description-itself">
+            {{ project.description }}
+          </p>
+        </div>
+      </div>
     </div>
 
-    <div class="project-description-container">
-      <p class="project-description-title eightbits">
-        {{ project.title }}
+    <ng-template #errorData>
+      <p class="project-description-title eightbits middle">
+        An error occurred here :(!
       </p>
-
-      <a href="{{ project.websiteLink }}" class="project-description-link">{{ project.websiteLink }}</a>
-
-      <p class="project-description-itself">
-        {{ project.description }}
-      </p>
-    </div>
+    </ng-template>
   </div>
+
+  <ng-template #loadingData>
+    <p class="project-description-title eightbits middle">
+      Loading data...
+    </p>
+  </ng-template>
 </div>
 
 
 <!-- mocks for development -->
-<!-- 
+  <!--
 <div class="projects-container">
 
   <div class="project-container">

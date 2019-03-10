@@ -1,0 +1,17 @@
+[
+{
+    "model": "backbits.aboutme",
+    "pk": 1,
+    "fields": {
+        "first_name": "Igor",
+        "last_name": "Grillo Peternella",
+        "city": "S\u00e3o Paulo - SP/Brazil",
+        "age": 27,
+        "marital_status": "Single",
+        "languages": "English, Portuguese, German",
+        "description": "After I earned my chemical engineer bachelor's degree at Unicamp and finished my senior thesis that included process engineering, software engineering and neural networks, I realized how fascinating software development really is. For this reason I decided that I needed a career change and switched from chemical engineering to software engineering.\r\n\r\nI'd define myself as an autodidact developer who loves learning new technologies in order to create new and creative solutions! I have experience with the following languages: Ruby, Javascript, Typescript, Java and Lisp. However, Python is definitely the language that I am most confortable with, so I'd say that it is my main language.\r\n\r\nI'm passionate about high-quality and test driven software development. I definitely love creating state-of-the-art software in which the user experience is essential.\r\n\r\nI'm also always looking for new ways to improve myself after work! Hence, I contribute or develop open source projects!",
+        "image": "backbits/about_me_igp.jpg",
+        "resume": "backbits/about_me_igp_resume.pdf"
+    }
+}
+]

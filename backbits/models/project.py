@@ -17,5 +17,4 @@ class Project(models.Model):
     title = models.CharField(max_length=255, null=False, blank=False)
     website_link = models.CharField(max_length=255, null=False, blank=False)
     description = models.TextField(max_length=500, null=False, blank=False)
-    image = models.FileField(upload_to="backbits/static/backbits", null=False, blank=False)
-
+    image = models.FileField(upload_to="backbits", null=False, blank=False)

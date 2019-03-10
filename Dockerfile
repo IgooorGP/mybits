@@ -13,9 +13,6 @@ RUN chmod +x ./docker-entrypoint.sh
 # makes wait-for-it script to be executable
 RUN chmod +x ./wait-for-it.sh
 
-# makes run_tests script to be executable
-RUN chmod +x ./test.sh
-
 # upgrades pip
 RUN pip install --upgrade pip
 

@@ -1,3 +1,4 @@
+import {enableProdMode} from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -21,6 +22,7 @@ const appRoutes: Routes = [
   { path: 'projects', component: ProjectsComponent },
   { path: 'skills', component: SkillsComponent },
   { path: 'contacts', component: ContactsComponent },
+  { path: "**", redirectTo: '/', pathMatch: 'full'}
 ];
 
 @NgModule({

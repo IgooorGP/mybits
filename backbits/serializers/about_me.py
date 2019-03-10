@@ -28,28 +28,12 @@ class AboutMeSerializer(serializers.ModelSerializer):
             "resume_url",
         )
 
-    def get_image_url(self, image):
-        """ Builds an absolute URL of the image. """
-        # gets the request context
-        request = self.context.get("request")
+    def get_image_url(self, about_me: AboutMe) -> str:
+        """ Builds the URL of the image. """
 
-        # gets the filesystem uri
-        filesystem_image_url = image.image.name
+        return about_me.image.url
 
-        # builds the full image url by removing unnecessary os folders
-        full_image_url = request.build_absolute_uri(filesystem_image_url).replace("/api/backbits/", "/")
+    def get_resume_url(self, about_me: AboutMe) -> str:
+        """ Builds the URL of the resume file. """
 
-        return full_image_url
-
-    def get_resume_url(self, resume):
-        """ Builds an absolute URL of the image. """
-        # gets the request context
-        request = self.context.get("request")
-
-        # gets the filesystem uri
-        filesystem_resume_url = resume.resume.name
-
-        # builds the full image url by removing unnecessary os folders
-        full_resume_url = request.build_absolute_uri(filesystem_resume_url).replace("/api/backbits/", "/")
-
-        return full_resume_url
+        return about_me.resume.url

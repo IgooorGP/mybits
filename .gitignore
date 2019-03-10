@@ -117,8 +117,11 @@ node_modules/
 # db-related data
 .db
 
-# deploy-related data
-.deployconfig
-
 # static files
 /static
+
+# media folder (required for running locally)
+# /media
+
+# local database for debugging
+db.sqlite3

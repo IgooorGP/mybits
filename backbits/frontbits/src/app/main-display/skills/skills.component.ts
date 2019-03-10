@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MyBitsService } from 'src/app/services/mybits.service';
 import { HttpResponse } from '@angular/common/http';
 import { Skill } from 'src/app/interfaces/skill.interface.';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-skills',
@@ -12,6 +13,8 @@ export class SkillsComponent implements OnInit {
 
   skillsArray: Skill[] = [];
   displayTitle = "Skills!";
+  hasError: boolean = false;
+  loading: boolean = true;
 
   constructor(private myBitsService: MyBitsService) { }
 
@@ -29,16 +32,22 @@ export class SkillsComponent implements OnInit {
             level: skill["level"],
             description: skill["description"],
             imageUrl: skill["image_url"]
-          }
+          };
 
           // pushes to the typed array
           this.skillsArray.push(s);
         });
 
-        console.log(this.skillsArray);
+        this.loading = false;
       },
       (err) => {
-        console.log(`Uh-oh! An exception was raised: [Status Code]:${err["status"]}, [Response]: ${err["statusText"]}`);
+        this.loading = false;
+        this.hasError = true;
+
+        // logging when not in production
+        if (!environment.production) {
+          console.log(`Uh-oh! An exception was raised: [Status Code]:${err["status"]}, [Response]: ${err["statusText"]}`);
+        }
       }
     );
   }

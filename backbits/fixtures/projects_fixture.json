@@ -1,0 +1,32 @@
+[
+{
+    "model": "backbits.project",
+    "pk": 1,
+    "fields": {
+        "title": "jazzpy",
+        "website_link": "https://github.com/IgooorGP/jazzpy",
+        "description": "This project is a recreation, in Python, of the game Jazz Jackrabbit created by Epic MegaGames in 1994.",
+        "image": "backbits/projects_jazz.jpg"
+    }
+},
+{
+    "model": "backbits.project",
+    "pk": 2,
+    "fields": {
+        "title": "Mybits!",
+        "website_link": "https://github.com/IgooorGP/mybits",
+        "description": "A website which contains some bits about me! Developed using Django and Angular!",
+        "image": "backbits/projects_bot.png"
+    }
+},
+{
+    "model": "backbits.project",
+    "pk": 3,
+    "fields": {
+        "title": "regex4ocr",
+        "website_link": "https://github.com/juntossomosmais/regex4ocr",
+        "description": "A library that allows one to model document images with a series of regular expressions in order to transform OCR results into structured data!",
+        "image": "backbits/projects_regex4ocr.png"
+    }
+}
+]

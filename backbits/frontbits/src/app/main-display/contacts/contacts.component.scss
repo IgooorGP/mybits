@@ -7,14 +7,14 @@
 h2.display-title {
     text-align: center;
     position: relative;
-    margin: 2% 0;
+    margin: 4% 0 2% 0;
     font-size: 50px;
-    color: #c1e0d2;
+    color: #20f1ff;
 }
 
 .subtitle {
     color: white;
-    font-size: 1.2em;
+    font-size: 1.3em;
     text-align: center;
     margin: 1% 0;
 }
@@ -25,16 +25,6 @@ h2.display-title {
     justify-content: center;
     align-items: center;
     margin-bottom: 1vh;
-
-    img {
-        padding: 0.5%;
-        // background: #030804;
-        background: #061725;
-        margin: 2% 2%;
-        width: 15%;
-        height: 17vh;
-        border-radius: 20px;
-    }
 }
 
 .contacts-container {
@@ -44,25 +34,25 @@ h2.display-title {
     flex-wrap: wrap;
     justify-content: center;
     width: 80%;
-    // overflow-y: scroll;
-    // height: 47vh;    
 }
 
 .contact {
-    width: 30%;
-    height: 15vh;
-    margin: 2% 0%;
-    border-radius: 5%;
+    background: #c4f1c9;
+    width: 40%;
+    height: 200px;
+    margin: 2% 5%;
+    border-radius: 10px;
 
     img {
         padding: 2% 4%;
         height: 100%;
         width: 100%;
+        border-radius: 10px;
     }
 }
 
 .contact:hover {
-    background-color: #2f2d2e;
+    background-color: #9fcca4;
 }
 
 @media screen and (max-width: 800px) {

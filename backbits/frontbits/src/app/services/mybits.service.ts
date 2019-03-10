@@ -2,7 +2,7 @@
  * Service used to get mybits info by making requests
  * to the backend API.
  */
-import { HttpClient, HttpHeaders, HttpResponse } from '@angular/common/http';
+import { HttpClient, HttpResponse } from '@angular/common/http';
 import { Injectable } from "@angular/core";
 import { environment } from "../../environments/environment";
 
@@ -32,7 +32,7 @@ export class MyBitsService {
             "aboutMe": environment.MYBITS_ENDPOINT_ABOUTME,
             "projects": environment.MYBITS_ENDPOINT_PROJECTS,
             "skills": environment.MYBITS_ENDPOINT_SKILLS
-        }
+        };
 
         let url = environment.MYBITS_HOST + urlMapping[sectionName];
 

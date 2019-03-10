@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MyBitsService } from 'src/app/services/mybits.service';
 import { HttpResponse } from '@angular/common/http';
 import { AboutMe } from 'src/app/interfaces/about-me.interface';
+import { environment } from "../../../environments/environment";
 
 @Component({
   selector: 'app-about-me',
@@ -12,6 +13,8 @@ export class AboutMeComponent implements OnInit {
 
   aboutMe: AboutMe;
   displayTitle: string = "About me";
+  hasError: boolean = false;
+  loading: boolean = true;
 
   constructor(private myBitsService: MyBitsService) { }
 
@@ -21,9 +24,7 @@ export class AboutMeComponent implements OnInit {
         let rawHttpResponseBody: AboutMe[] = response.body;
 
         rawHttpResponseBody.forEach(aboutMe => {
-
-          // creates a typed object of the interface
-          let aboutData: AboutMe = {
+          this.aboutMe = {
             firstName: aboutMe["first_name"],
             lastName: aboutMe["last_name"],
             city: aboutMe["city"],
@@ -34,14 +35,18 @@ export class AboutMeComponent implements OnInit {
             imageUrl: aboutMe["image_url"],
             resumeUrl: aboutMe["resume_url"],
           };
-
-          this.aboutMe = aboutData;
         });
 
-        console.log(this.aboutMe);
+        this.loading = false;
       },
       (err) => {
-        console.log(`Uh-oh! An exception was raised: [Status Code]:${err["status"]}, [Response]: ${err["statusText"]}`);
+        this.loading = false;
+        this.hasError = true;
+
+        // logging when not in production
+        if (!environment.production) {
+          console.log(`Uh-oh! An exception was raised: [Status Code]:${err["status"]}, [Response]: ${err["statusText"]}`);
+        }
       }
     );
   }

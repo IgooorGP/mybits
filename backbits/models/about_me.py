@@ -17,5 +17,7 @@ class AboutMe(models.Model):
     marital_status = models.CharField(max_length=100, null=False, blank=False)
     languages = models.CharField(max_length=255, null=False, blank=False)
     description = models.TextField(null=False, blank=False)
-    image = models.FileField(upload_to="backbits/static/backbits", null=False, blank=False)
-    resume = models.FileField(upload_to="backbits/static/backbits", null=False, blank=False)
+
+    # uploads to MEDIA_ROOT/backbits/ = ./media/mybits/backbits/
+    image = models.FileField(upload_to="backbits", null=False, blank=False)
+    resume = models.FileField(upload_to="backbits", null=False, blank=False)
