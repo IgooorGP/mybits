@@ -6,7 +6,7 @@ black
 pylint
 pep8
 flake8
-pytest
+pytest==4.3.0
 pytest-cov
 coverage
 requests_mock
