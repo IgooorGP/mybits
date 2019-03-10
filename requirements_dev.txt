@@ -6,8 +6,8 @@ black
 pylint
 pep8
 flake8
-pytest==4.3.0
-pytest-cov
+pytest==4.3.8
+pytest-cov==2.5.1
 coverage
 requests_mock
 pytest_django
