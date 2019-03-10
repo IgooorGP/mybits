@@ -115,10 +115,4 @@ This application uses Tox to manage environments and run tests. In order to run,
 
 ```tox```
 
-## Deployment instructions
-
-The bash script ```deploy.sh``` uses the rsync command to transfer safely the application files to a remote webserver. Hence, to deploy code to a remote instance:
-
-```bash
-source deploy.sh
-```
+This will run all the unit/integration tests and display the test coverage of the project!
