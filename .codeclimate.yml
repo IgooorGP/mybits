@@ -37,5 +37,4 @@ exclude_patterns:
   - "./backbits/migrations/"
   - "./backbits/static/"
   - "./backbits/templates/"
-  - "./backbits/tests/"
-  - "**/node_modules/"
+  - "./backbits/tests/"æ
