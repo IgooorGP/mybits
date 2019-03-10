@@ -1,4 +1,7 @@
 # My Bits
+[![Maintainability](https://api.codeclimate.com/v1/badges/816fe0a7963cddd3d41c/maintainability)](https://codeclimate.com/github/IgooorGP/mybits/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/816fe0a7963cddd3d41c/test_coverage)](https://codeclimate.com/github/IgooorGP/mybits/test_coverage)
+[![Build Status](https://travis-ci.org/IgooorGP/mybits.svg?branch=master)](https://travis-ci.org/IgooorGP/mybits)
 [![Code style: black](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 Mybits is a dockerized and responsive project that contains some bits (info) about me and a chatbot to answer questions! 
