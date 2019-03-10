@@ -34,5 +34,5 @@ exclude_patterns:
   - "**/.tox/"
   - "**/.dist/"
   - "backbits/frontbits/"
-  - "backbits/tests"
-  - "**/node_modules"
+  - "backbits/tests/"
+  - "**/node_modules/"
