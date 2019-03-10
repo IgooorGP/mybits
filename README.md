@@ -6,6 +6,7 @@ Mybits is a dockerized and responsive project that contains some bits (info) abo
 ## Built with
 
 * Python 3.7.1;
+* Nginx as a revese proxy for the Django app;
 * Django (backend and content management);
 * Django Rest Framework (RESTful api development);
 * Angular (frontend);
@@ -61,25 +62,46 @@ In order to run this application, just clone this repo and run the following com
 ```docker-compose up```
 
 Since this is a fully dockerized application, starting the application is pretty straight forward!
-This starts the development server on port 5005 which serves the Django app. The docker-entrypoint file
-will perform the necessary migrations and also collect all static files which can be later used in deployments.
+
+This starts the development server on port 5005 which serves the Django app. However, making a GET request to:
+
+```http://0.0.0.0:5005```  <-- BAD request!
+
+Will NOT work (http 400) because the Django app is configured to only accept connections from the HOST:```localhost```!
+
+Hence, in order to access the application, make a GET request to:
+
+```http://localhost```
+
+Now, this request is intercepted by the ```Nginx container``` which will reverse proxy the requests to the Django app!
+
 
 ### Starting the frontend only (angular serve)
 
-In order to run just the angular app (no backend server), just run the following command inside
-the frontbits folder:
+In order to run just the angular app (no backend server), just run the following commands:
+
+Go inside the directory: ```/backbits/frontbits.``` and run:
 
 ```ng serve``` or ```gulp serve```
 
-### Building the full application
+### Building the frontend application (Angular)
 
 In order to build the angular app and transfer all of its compiled files to be served by Django,
 just run the following commands:
 
-Inside the fronbits folder, run:
+Go inside the directory: ```/backbits/frontbits/``` and run:
 
-```gulp build-dev```: this will invoke ng build with the appropriate args and transfer the compiled files
-to Django's appropriate folders;
+```gulp build-dev```
+ 
+This will invoke ng build with the appropriate args and transfer the compiled files to Django's appropriate folders;
+
+* Note: Gulp and Angular's client (ng command) MUST be installed with NPM! 
+
+If not, install npm and node (I highly recommend using NVM for that), then install Gulp and the Angular command line client:
+
+```npm install gulp```
+
+```npm install -g @angular/cli```
 
 Then, just execute the django server by running the following command on any folder:
 
